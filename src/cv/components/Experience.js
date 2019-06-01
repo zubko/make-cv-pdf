@@ -1,14 +1,14 @@
 // @flow
-import * as React from 'react';
-import { View, Text } from '@react-pdf/renderer';
-import styled from '@react-pdf/styled-components';
+import * as React from "react";
+import { View, Text } from "@react-pdf/renderer";
+import styled from "@react-pdf/styled-components";
 
 const Item = ({ title, dates, company, children }) => (
   <View>
     <Text>{title}</Text>
     <Text>{dates}</Text>
     <Text>{company}</Text>
-    <Text>{children}</Text>
+    {children}
   </View>
 );
 
@@ -18,7 +18,8 @@ export default () => (
     <Item
       title="React Native Team Lead"
       dates="March 2018 - April 2019"
-      company="Agiliway, Ukraine">
+      company="Agiliway, Ukraine"
+    >
       <Text>
         Making a configurable framework on top of React Native to be used to
         make a number of apps which work with CiviCRM backend.

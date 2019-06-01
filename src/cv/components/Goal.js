@@ -7,6 +7,9 @@ const Container = styled(View)`
   background-color: lightgrey;
   padding: 5px;
 `;
+const BoldText = styled(Text)`
+  font-weight: bold;
+`;
 const StyledText = styled(Text)`
   font-size: 20px;
 `;
@@ -14,7 +17,8 @@ const StyledText = styled(Text)`
 export default () => (
   <Container style={{ backgroundColor: "lightgrey", padding: "5px" }}>
     <StyledText>
-      Goal: Develop great mobile apps as a part of a great team.
+      <BoldText>Goal:</BoldText> Develop great mobile apps as a part of a great
+      team.
     </StyledText>
   </Container>
 );
