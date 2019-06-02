@@ -3,6 +3,8 @@ import * as React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
+import { Glyph } from ".";
+
 const Container = styled(View)`
   align-items: flex-end;
 `;
@@ -11,19 +13,28 @@ const ItemText = styled(Text)`
   font-size: 16px;
 `;
 
-const Item = ({ children, image }) => (
+const Item = ({ children }) => (
   <View>
     <ItemText>{children}</ItemText>
-    {/* <Image source="/static/images/react-native.svg" /> */}
   </View>
 );
 
 export default ({ style }) => (
   <Container style={style}>
-    <Item image="">https://zubko.io</Item>
-    <Item image="">alex@zubko.io</Item>
-    <Item image="">+380(96)3945469</Item>
-    <Item image="">Ukraine</Item>
-    <Item image="">zubko.alexander</Item>
+    <Item>
+      https://zubko.io <Glyph name="globe" />
+    </Item>
+    <Item>
+      alex@zubko.io <Glyph name="envelope" />
+    </Item>
+    <Item>
+      +380(96)3945469 <Glyph name="phone" />
+    </Item>
+    <Item>
+      Remote / Relocation <Glyph name="map-marker" />
+    </Item>
+    <Item>
+      zubko.alexander <Glyph name="skype" />
+    </Item>
   </Container>
 );

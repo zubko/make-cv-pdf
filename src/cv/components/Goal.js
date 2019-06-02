@@ -17,8 +17,8 @@ const StyledText = styled(Text)`
 export default () => (
   <Container style={{ backgroundColor: "lightgrey", padding: "5px" }}>
     <StyledText>
-      <BoldText>Goal:</BoldText> Develop great mobile apps as a part of a great
-      team.
+      <BoldText>Goal:</BoldText> To develop great mobile and web apps as a part
+      of a great team.
     </StyledText>
   </Container>
 );
