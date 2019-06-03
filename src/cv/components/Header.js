@@ -20,14 +20,16 @@ const MainArea = styled(View)`
 `;
 const Name = styled(Text)`
   font-size: 30px;
+  line-height: 1.2;
   font-weight: medium;
 `;
 const Title = styled(Text)`
   font-size: 20px;
+  line-height: 1.2;
   font-weight: 400;
 `;
 const TitleItem = styled(Title)`
-  padding-left: 30px;
+  padding-left: 20px;
 `;
 const StyledContacts = styled(Contacts)`
   margin: 20px;
@@ -37,9 +39,9 @@ export default () => (
   <Container>
     <MainArea>
       <Name>ALEXANDER ZUBKO</Name>
-      <Title>Mobile Apps Developer</Title>
-      <TitleItem>- iOS / Android</TitleItem>
-      <TitleItem>- Native / React Native</TitleItem>
+      <Title>Mobile Apps Developer with Web and Node skills</Title>
+      {/* <TitleItem>- Mobile</TitleItem>
+      <TitleItem>- Web</TitleItem> */}
     </MainArea>
     <StyledContacts />
   </Container>

@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-const FA = styled(Text)`
+const Regular = styled(Text)`
   font-family: "FontAwesome";
 `;
 const Solid = styled(Text)`
@@ -17,15 +17,18 @@ const knownNames = {
   globe: [Solid, "\uf0ac"],
   "map-marker": [Solid, "\uf3c5"],
   phone: [Solid, "\uf095"],
-  skype: [Brands, "\uf17e"]
+  skype: [Brands, "\uf17e"],
+  "star-half-solid": [Solid, "\uf089"],
+  "star-solid": [Solid, "\uf005"],
+  star: [Regular, "\uf005"]
 };
 
-export default ({ code = "", name = "" }) => {
+export default ({ code = "", name = "", style }) => {
   if (name) {
     const code = knownNames[name];
     if (code) {
       const Component = code[0];
-      return <Component>{code[1]}</Component>;
+      return <Component style={style}>{code[1]}</Component>;
     }
     console.error(
       `Glyph: Unknown name ${name}. Possible names are ${Object.keys(
@@ -34,5 +37,5 @@ export default ({ code = "", name = "" }) => {
     );
     return null;
   }
-  return <FA>{code}</FA>;
+  return <Regular style={style}>{code}</Regular>;
 };
