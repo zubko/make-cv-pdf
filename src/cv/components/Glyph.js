@@ -7,6 +7,7 @@ const Regular = styled(Text)`
 `;
 const Solid = styled(Text)`
   font-family: "FontAwesome-Solid";
+  font-size:15px;
 `;
 const Brands = styled(Text)`
   font-family: "FontAwesome-Brands";

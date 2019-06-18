@@ -3,29 +3,46 @@ import * as React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { SkillItem } from ".";
-
 const Container = styled(View)`
   background-color: #263547;
   color: white;
   padding: 5px;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+const Group = styled(Text)`
+  font-family: "Content";
+  font-size: 20px;
+`;
+const GroupName = styled(Text)`
+  font-weight: bold;
 `;
 
 export default () => (
   <Container>
-    <SkillItem name="React Native" score={4.5} />
-    <SkillItem name="JavaScript" score={5} />
-    <SkillItem name="Objective-C" score={5} />
-    <SkillItem name="Swift" score={3.5} />
-    <SkillItem name="iOS Frameworks" score={4.5} />
-    <SkillItem name="Java" score={4} />
-    <SkillItem name="Kotlin" score={3} />
-    <SkillItem name="Android Libraries" score={3} />
-    <SkillItem name="React" score={4} />
-    <SkillItem name="HTML/CSS/JS" score={3.5} />
-    <SkillItem name="Node.js" score={2} />
+    <Group>
+      <GroupName>React Native: </GroupName>
+      JavaScript, Flow, Ramda, Redux, MobX, Redux Saga, Interop with native
+      code.
+    </Group>
+    <Group>
+      <GroupName>iOS: </GroupName>
+      React Native, Objective-C, Swift, Xcode, Frameworks (UIKit, Core Graphics,
+      Core Data, etc.), Instruments, CocoaPods.
+    </Group>
+    <Group>
+      <GroupName>Android: </GroupName>
+      Java, Kotlin, Android Studio, Gradle, Android Libraries.
+    </Group>
+    <Group>
+      <GroupName>Web: </GroupName>
+      HTML/CSS/JS, React, Emotion, Gatsby, Node.js, SQL.
+    </Group>
+    <Group>
+      <GroupName>General: </GroupName>
+      Git, CI, FP, DRY, YAGNI
+    </Group>
   </Container>
 );

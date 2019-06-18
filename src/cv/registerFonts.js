@@ -6,23 +6,23 @@ export default () => {
     fonts: [
       {
         fontWeight: "light",
-        src: "http://localhost:8000/fonts/WorkSans-Light.ttf"
+        src: "/fonts/WorkSans-Light.ttf"
       },
       {
         fontWeight: "normal",
-        src: "http://localhost:8000/fonts/WorkSans-Regular.ttf"
+        src: "/fonts/WorkSans-Regular.ttf"
       },
       {
         fontWeight: "medium",
-        src: "http://localhost:8000/fonts/WorkSans-Medium.ttf"
+        src: "/fonts/WorkSans-Medium.ttf"
       },
       {
         fontWeight: "semibold",
-        src: "http://localhost:8000/fonts/WorkSans-SemiBold.ttf"
+        src: "/fonts/WorkSans-SemiBold.ttf"
       },
       {
         fontWeight: "bold",
-        src: "http://localhost:8000/fonts/WorkSans-Bold.ttf"
+        src: "/fonts/WorkSans-Bold.ttf"
       }
     ]
   });
@@ -31,24 +31,24 @@ export default () => {
     fonts: [
       {
         fontWeight: "normal",
-        src: "http://localhost:8000/fonts/QuattrocentoSans-Regular.ttf"
+        src: "/fonts/QuattrocentoSans-Regular.ttf"
       },
       {
         fontWeight: "bold",
-        src: "http://localhost:8000/fonts/QuattrocentoSans-Bold.ttf"
+        src: "/fonts/QuattrocentoSans-Bold.ttf"
       }
     ]
   });
   Font.register({
     family: "FontAwesome",
-    src: "http://localhost:8000/fonts/fa-regular-400.ttf"
+    src: "/fonts/fa-regular-400.ttf"
   });
   Font.register({
     family: "FontAwesome-Solid",
-    src: "http://localhost:8000/fonts/fa-solid-900.ttf"
+    src: "/fonts/fa-solid-900.ttf"
   });
   Font.register({
     family: "FontAwesome-Brands",
-    src: "http://localhost:8000/fonts/fa-brands-400.ttf"
+    src: "/fonts/fa-brands-400.ttf"
   });
 };

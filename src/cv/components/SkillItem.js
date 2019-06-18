@@ -7,25 +7,26 @@ import { Glyph } from ".";
 
 const Container = styled(View)`
   align-items: center;
-  padding: 5px;
+  padding-horizontal: 5px;
+  padding-vertical: 2px;
   flex-direction: row;
 `;
 const StyledText = styled(Text)`
   font-size: 20px;
 `;
-const StarSolid = ({ half = false }) => (
-  <Glyph name={half ? "star-half-solid" : "star-solid"} />
-);
-const StyledStarSolid = styled(StarSolid)`
-  font-size: 20px;
-  margin-bottom: 5px;
+const Star = styled(Glyph)`
+  font-size: 10px;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 2px;
 `;
+Star.defaultProps = { name: "star-solid" };
 
 type Props = { name: string, score: number };
 export default ({ name = "", score = 5 }: Props) => (
   <Container>
-    <StyledText>{name} </StyledText>
-    <StyledStarSolid />
+    <StyledText>{name}</StyledText>
+    <Star />
     <StyledText>{score}</StyledText>
   </Container>
 );

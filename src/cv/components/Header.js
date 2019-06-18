@@ -28,9 +28,6 @@ const Title = styled(Text)`
   line-height: 1.2;
   font-weight: 400;
 `;
-const TitleItem = styled(Title)`
-  padding-left: 20px;
-`;
 const StyledContacts = styled(Contacts)`
   margin: 20px;
 `;
@@ -39,9 +36,7 @@ export default () => (
   <Container>
     <MainArea>
       <Name>ALEXANDER ZUBKO</Name>
-      <Title>Mobile Apps Developer with Web and Node skills</Title>
-      {/* <TitleItem>- Mobile</TitleItem>
-      <TitleItem>- Web</TitleItem> */}
+      <Title>Mobile Apps Developer with Web and Node.js skills</Title>
     </MainArea>
     <StyledContacts />
   </Container>
