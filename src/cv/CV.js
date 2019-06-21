@@ -2,7 +2,7 @@ import React from "react";
 import { Page, Document, View, Text } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { Header, Goal, Skills, References, Experience } from "./components";
+import { Header, Goal, Skills, References, Experience, WantToLearn } from "./components";
 
 const StyledPage = styled(Page)`
   background-color: white;
@@ -28,6 +28,7 @@ const Comp = () => (
       <CodeExamples />
       <Experience />
       <References />
+      <WantToLearn/>
     </StyledPage>
   </Document>
 );

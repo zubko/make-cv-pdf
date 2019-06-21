@@ -29,7 +29,7 @@ export default () => (
     </Group>
     <Group>
       <GroupName>iOS: </GroupName>
-      React Native, Objective-C, Swift, Xcode, Frameworks (UIKit, Core Graphics,
+      Objective-C, Swift, Xcode, Frameworks (UIKit, Core Graphics,
       Core Data, etc.), Instruments, CocoaPods.
     </Group>
     <Group>

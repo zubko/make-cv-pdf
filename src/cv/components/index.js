@@ -8,6 +8,7 @@ import Header from "./Header";
 import References from "./References";
 import SkillItem from "./SkillItem";
 import Skills from "./Skills";
+import WantToLearn from "./WantToLearn";
 
 export {
   Contacts,
@@ -17,5 +18,6 @@ export {
   Header,
   References,
   SkillItem,
-  Skills
+  Skills,
+  WantToLearn
 };
