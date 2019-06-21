@@ -8,11 +8,15 @@ import { Glyph } from "../components";
 const Item = ({ title, dates, company, children }) => (
   <View>
     <Text style={{ backgroundColor: "lightgray" }}>
-      {title} | { dates ? dates + ' | ' : null}{company}
+      {title} | {dates ? dates + " | " : null}
+      {company}
     </Text>
     {children}
   </View>
 );
+const SubSection = styled(View)`
+  padding-left: 40;
+`;
 
 export default () => (
   <View>
@@ -26,9 +30,9 @@ export default () => (
         Made a configurable framework on top of React Native to be used to make
         apps which work with CiviCRM backend. Used this framework to build 2
         apps for the company. Configured and fixed native libraries. Lead a team
-        of 2-4 mobile developers. Delivered first release in 2 months. Provided maximum
-        code reuse and easy dev switch between the apps. Created modular and
-        configurable architecture, easy to start for a new developer on the
+        of 2-4 mobile developers. Delivered first release in 2 months. Provided
+        maximum code reuse and easy dev switch between the apps. Created modular
+        and configurable architecture, easy to start for a new developer on the
         team, easy to understand what is where and how to add new features.
       </Text>
     </Item>
@@ -47,34 +51,36 @@ export default () => (
       </Text>
     </Item>
     <Text>Some clients and apps:</Text>
-    <Item
-      title="iOS React Native & Android Native Developer"
-      dates="Jul'17 - Dec'17"
-      company="Amila, Toronto, Canada"
-    >
-      <Text>
-        Developed Pregnancy tracker React Native iOS app and worked on the
-        Native Android apps of the company.
-      </Text>
-    </Item>
-    <Item
-      title="iOS Native Team Lead"
-      dates="May'15 - Dec'16"
-      company="Brownie Points, San Mateo, CA, USA"
-    >
-      <Text>
-        Worked with a US based startup to make an app to help parents to
-        motivate their kids to study math. The app provided very smooth UX.
-        Optimistic and background communication with backend was used everywhere
-        where possible. All scrolling and screen switching was smooth and
-        interesting to the eye. Parents and kids loved the app, we had 4.5 star
-        rating in the AppStore. I also created tools and scripts to help with the
-        development. For example we had a tool to generate the initial data with
-        which the users will get the app. There was a tool to eliminate unused
-        images and another one to analyze not critical error reports that were
-        sent from the app to our backend.
-      </Text>
-    </Item>
+    <SubSection>
+      <Item
+        title="iOS React Native & Android Native Developer"
+        dates="Jul'17 - Dec'17"
+        company="Amila, Toronto, Canada"
+      >
+        <Text>
+          Developed Pregnancy tracker React Native iOS app and worked on the
+          Native Android apps of the company.
+        </Text>
+      </Item>
+      <Item
+        title="iOS Native Team Lead"
+        dates="May'15 - Dec'16"
+        company="Brownie Points, San Mateo, CA, USA"
+      >
+        <Text>
+          Worked with a US based startup to make an app to help parents to
+          motivate their kids to study math. The app provided very smooth UX.
+          Optimistic and background communication with backend was used
+          everywhere where possible. All scrolling and screen switching was
+          smooth and interesting to the eye. Parents and kids loved the app, we
+          had 4.5 star rating in the AppStore. I also created tools and scripts
+          to help with the development. For example we had a tool to generate
+          the initial data with which the users will get the app. There was a
+          tool to eliminate unused images and another one to analyze not
+          critical error reports that were sent from the app to our backend.
+        </Text>
+      </Item>
+    </SubSection>
     <Item
       title="iOS Native Developer"
       dates="Feb'11 - Aug'11"
@@ -114,13 +120,15 @@ export default () => (
         used Python to develop an internal GUI tool for the company.
       </Text>
     </Item>
-    <Item
-      title="Before working professionally"
-      dates=""
-      company="Ukraine"
-    >
+    <Item title="Before working professionally" dates="" company="Ukraine">
       <Text>
-        I was introduced in programming from quite an early age. I wrote simple games in Pascal & C++, did some basic utility apps for myself and for my parents. I received a good tutoring in algorithms while preparing and taking part in school competitions in Computer Science. In college time I was making a website for the faculty and I maintained a Delphi app which communicated over COM ports with hardware controllers of the lab machine.
+        I was introduced in programming from quite an early age. I wrote simple
+        games in Pascal & C++, did some basic utility apps for myself and for my
+        parents. I received a good tutoring in algorithms while preparing and
+        taking part in school competitions in Computer Science. In college time
+        I was making a website for the faculty and I maintained a Delphi app
+        which communicated over COM ports with hardware controllers of the lab
+        machine.
       </Text>
     </Item>
   </View>

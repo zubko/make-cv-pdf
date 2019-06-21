@@ -8,7 +8,7 @@ import styled from "@react-pdf/styled-components";
 import { Contacts } from ".";
 
 const Container = styled(View)`
-  background-color: #912e9c;
+  background-color: indigo;
   color: white;
   flex-direction: row;
 `;
