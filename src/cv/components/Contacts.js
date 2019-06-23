@@ -1,17 +1,15 @@
-// @flow
 import * as React from "react";
-import { View, Text, Link } from "@react-pdf/renderer";
+import { View, Link } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { Glyph } from ".";
+import { Glyph, NormalText } from ".";
 
 const Container = styled(View)`
   align-items: flex-end;
   line-height: 1.2;
 `;
-
-const ItemText = styled(Text)`
-  font-size: 16px;
+const ItemText = styled(NormalText)`
+  font-size: 13px;
 `;
 
 const Item = ({ children, href = "" }) => {

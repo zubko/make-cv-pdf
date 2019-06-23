@@ -1,23 +1,25 @@
 // @flow
 import * as React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
+import { NormalText, BoldText } from ".";
+import { theme, metrics } from "../utils";
+
 const Container = styled(View)`
-  background-color: #263547;
-  color: white;
-  padding: 5px;
+  background-color: ${theme.darkBg};
+  color: ${theme.lightText};
+  padding: ${metrics.padding(1)};
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 `;
-const Group = styled(Text)`
-  font-family: "Content";
-  font-size: 20px;
+const Group = styled(NormalText)`
+  font-size: 13px;
 `;
-const GroupName = styled(Text)`
-  font-weight: bold;
+const GroupName = styled(BoldText)`
+  font-size: 13px;
 `;
 
 export default () => (
@@ -29,8 +31,8 @@ export default () => (
     </Group>
     <Group>
       <GroupName>iOS: </GroupName>
-      Objective-C, Swift, Xcode, Frameworks (UIKit, Core Graphics,
-      Core Data, etc.), Instruments, CocoaPods.
+      Objective-C, Swift, Xcode, Frameworks (UIKit, Core Graphics, Core Data,
+      etc.), Instruments, CocoaPods.
     </Group>
     <Group>
       <GroupName>Android: </GroupName>
@@ -39,6 +41,11 @@ export default () => (
     <Group>
       <GroupName>Web: </GroupName>
       HTML/CSS/JS, React, Emotion, Gatsby, Node.js, SQL.
+    </Group>
+    <Group>
+      <GroupName>Algorithms: </GroupName>
+      took part in the competitions in Informatics in school years. Winner of
+      regional competition.
     </Group>
     <Group>
       <GroupName>General: </GroupName>

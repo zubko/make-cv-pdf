@@ -1,42 +1,38 @@
 // @flow
 import * as React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import { View, Image } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-// import { rhythm } from '../../Typography';
+import { theme } from "../utils";
 
-import { Contacts } from ".";
+import { Contacts, H1, H2 } from ".";
 
 const Container = styled(View)`
-  background-color: indigo;
+  background-color: ${theme.header};
   color: white;
   flex-direction: row;
 `;
 const MainArea = styled(View)`
   flex: 1;
   flex-direction: column;
-  padding: 20px;
-  font-family: "Title";
-`;
-const Name = styled(Text)`
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: medium;
-`;
-const Title = styled(Text)`
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 15px;
 `;
 const StyledContacts = styled(Contacts)`
-  margin: 20px;
+  margin: 15px 20px 10px;
+`;
+const Photo = styled(Image)`
+  width: 60px;
+  object-fit: contain;
+  margin-left: 20px;
 `;
 
 export default () => (
   <Container>
+    <Photo src="/photo.png" />
     <MainArea>
-      <Name>ALEXANDER ZUBKO</Name>
-      <Title>Mobile Apps Developer with Web and Node.js skills</Title>
+      <H1>Alexander Zubko</H1>
+      <H2>Mobile Apps Developer with Web and Node.js skills</H2>
     </MainArea>
     <StyledContacts />
   </Container>

@@ -1,8 +1,14 @@
 import React from "react";
-import { Page, Document, View, Text } from "@react-pdf/renderer";
+import { Page, Document } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { Header, Goal, Skills, References, Experience, WantToLearn } from "./components";
+import {
+  Header,
+  Goal,
+  Skills,
+  Experience,
+  CodeExamples
+} from "./components";
 
 const StyledPage = styled(Page)`
   background-color: white;
@@ -10,25 +16,14 @@ const StyledPage = styled(Page)`
   font-family: "Content";
 `;
 
-const CodeExamples = () => (
-  <View style={{ backgroundColor: "lightgray", padding: 5 }}>
-    <Text>
-      Code Examples: https://codesandbox.io/u/zubko , https://codepen.io/zubko/
-      , https://github.com/zubko
-    </Text>
-  </View>
-);
-
 const Comp = () => (
-  <Document size="A4">
+  <Document size="A4" title="AlexanderZubko">
     <StyledPage>
       <Header />
       <Goal />
       <Skills />
-      <CodeExamples />
       <Experience />
-      <References />
-      <WantToLearn/>
+      <CodeExamples />
     </StyledPage>
   </Document>
 );
