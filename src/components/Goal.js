@@ -3,11 +3,11 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { NormalText, BoldText } from ".";
-import { metrics } from "../utils";
+import { NormalText, BoldText } from "./Text";
+import { metrics, colors } from "../utils/theme";
 
 const Container = styled(View)`
-  background-color: lightgrey;
+  background-color: ${colors.middleBg};
   padding: ${metrics.padding(1)};
 `;
 

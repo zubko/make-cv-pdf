@@ -3,14 +3,14 @@ import * as React from "react";
 import { View, Image } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { theme } from "../utils";
+import { colors } from "../utils/theme";
 
 import Contacts from "./Contacts";
 import { H1, H2 } from "./Text";
 import getResourcePath from "../utils/getResourcePath";
 
 const Container = styled(View)`
-  background-color: ${theme.header};
+  background-color: ${colors.header};
   color: white;
   flex-direction: row;
 `;

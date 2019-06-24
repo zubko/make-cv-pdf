@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { PDFViewer } from "@react-pdf/renderer";
 
-import CV from "./cv/CV";
+import CV from "./components/CV";
 
 function App() {
   return (

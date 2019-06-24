@@ -4,11 +4,11 @@ import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { NormalText, BoldText } from "./Text";
-import { theme, metrics } from "../utils";
+import { colors, metrics } from "../utils/theme";
 
 const Container = styled(View)`
-  background-color: ${theme.darkBg};
-  color: ${theme.lightText};
+  background-color: ${colors.darkBg};
+  color: ${colors.lightText};
   padding: ${metrics.padding(1)};
   flex-direction: column;
   flex-wrap: wrap;

@@ -2,13 +2,11 @@ import React from "react";
 import { Page, Document } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import {
-  Header,
-  Goal,
-  Skills,
-  Experience,
-  CodeExamples
-} from "./components";
+import Header from './Header';
+import Goal from './Goal';
+import Skills from './Skills';
+import Experience from './Experience';
+import CodeExamples from './CodeExamples';
 
 const StyledPage = styled(Page)`
   background-color: white;
@@ -16,7 +14,7 @@ const StyledPage = styled(Page)`
   font-family: "Content";
 `;
 
-const Comp = () => (
+const CV = () => (
   <Document size="A4" title="AlexanderZubko">
     <StyledPage>
       <Header />
@@ -28,4 +26,4 @@ const Comp = () => (
   </Document>
 );
 
-export default Comp;
+export default CV;

@@ -2,12 +2,12 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { theme, metrics } from "../utils";
-import {NormalText,BoldText} from './Text';
+import {colors, metrics} from "../utils/theme";
+import { NormalText, BoldText } from "./Text";
 
 const ItemTitle = styled(NormalText)`
-  /* background-color: ${theme.darkBg}; */
-  color: ${theme.darkBg};
+  /* background-color: ${colors.darkBg}; */
+  color: ${colors.darkBg};
 `;
 
 const Container = styled(View)`
@@ -16,7 +16,7 @@ const Container = styled(View)`
 
 const SectionTitle = styled(NormalText)`
   padding: ${metrics.padding(1)};
-  background-color: ${theme.middleBg};
+  background-color: ${colors.middleBg};
 `;
 
 const Item = ({
