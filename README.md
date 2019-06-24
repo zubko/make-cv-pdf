@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Generating CV PDF using React (react-pdf)
 
-## Available Scripts
+Instead of drawing the CV in Sketch or Canva or making it with some word processor like Google Docs or MS Word, why not to use your React skills and generate the CV from code!
 
-In the project directory, you can run:
+### Some pros:
 
-### `npm start`
+- More fun :)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- It's relatively easy to experiment with the structure, considering that going from 2 to 1 columns is as quick as tuning some flexbox CSS and moving components between parents.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Once everything is setup it's quite magical to change some consts like the font size in one place or paddings, colors etc and observe the result
 
-### `npm test`
+- Generating PDF from code can be useful for some other projects where users can download some generated content, receipts, itineraries etc.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- No need for some specific hacks when the editor doesn't support some feature. For example I was struggling making URLs in Canva, I ended up putting empty overlays with the link. It worked OK, but any change to the structure required a lot of drag'n'drop of invisible elements which wasn't fun and was also error prone.
 
-### `npm run build`
+### Some cons:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Making initial version will take more time because of all the setup needed and sometimes dragging the texts and rects with the mouse is just faster than doing that from code.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- It won't be easy to implement the design which is outside of flexbox or react-pdf capabilities, like putting the text inside the circle or drawing non rectangular shapes. (Although for rendering PDF from HTML these capabilities will be broader).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Using react-pdf vs. any of HTML-to-PDF solution
 
-### `npm run eject`
+<ul style="list-style:none;">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👍 Rendering happens without using extra apps / servers (no need for headless Chrome etc).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👎 Less flexible/powerful formatting and styling compared to HTML/CSS.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👍 More predictable styling and rendering.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+👍 Client side rendering is possible.
 
-## Learn More
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can use this project as a starting point or a reference to save some configuration time.
 
-### Code Splitting
+The main result of the generation is achieved with:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```sh
+yarn pdf
+```
 
-### Analyzing the Bundle Size
+This will render a PDF document using node. The path to the file is set in `package.json`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+And it is also possible (and important) to be able to preview the document while editing it. I've used `create-react-app` for that, so run as usual:
 
-### Making a Progressive Web App
+```sh
+yarn start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Keep the browser side-by-side to the code and enjoy the live-reload while editing.
 
-### Advanced Configuration
+The images and fonts can be found in the `public` folder.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+I didn't want to keep the PDF generation code with the website to not mix 2 different React apps under the same root. For this particular use-case it's expected that the PDF will be edited quite rarely comparing to the website where it's used, so this workflow is enough  for now and it's less complex.
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Happy hacking!
