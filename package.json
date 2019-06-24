@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "pdf": "BABEL_ENV=node babel-node ./src/index.js",
+    "pdf": "BABEL_ENV=node babel-node ./src/index.js ../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

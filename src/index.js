@@ -8,11 +8,11 @@ import registerFonts from "./utils/registerFonts";
 registerFonts();
 
 if (env.isNode) {
+  const path = require("path");
   const CV = require("./components/CV").default;
-  ReactPDF.render(
-    <CV />,
-    `${__dirname}/../../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf`
-  );
+  const fullPath = path.resolve(process.argv[2]);
+  console.log("Saving to", fullPath);
+  ReactPDF.render(<CV />, fullPath);
 } else {
   const App = require("./App").default;
   ReactDOM.render(<App />, document.getElementById("root"));
