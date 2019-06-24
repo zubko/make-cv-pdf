@@ -3,7 +3,7 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { NormalText, BoldText } from ".";
+import { NormalText, BoldText } from "./Text";
 import { theme, metrics } from "../utils";
 
 const Container = styled(View)`

@@ -1,12 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import ReactPDF from "@react-pdf/renderer";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import env from './cv/utils/env';
+import registerFonts from "./cv/registerFonts";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+registerFonts();
+
+if (env.isNode) {
+  const CV = require("./cv/CV").default;
+  ReactPDF.render(
+    <CV />,
+    `${__dirname}/../../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf`
+  );
+} else {
+  const App = require("./App").default;
+  ReactDOM.render(<App />, document.getElementById("root"));
+}

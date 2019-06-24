@@ -1,28 +1,30 @@
 import { Font } from "@react-pdf/renderer";
 
+import getResourcePath from './utils/getResourcePath';
+
 export default () => {
   Font.register({
     family: "Title",
     fonts: [
       {
         fontWeight: "light",
-        src: "/fonts/WorkSans-Light.ttf"
+        src: getResourcePath("fonts/WorkSans-Light.ttf")
       },
       {
         fontWeight: "normal",
-        src: "/fonts/WorkSans-Regular.ttf"
+        src: getResourcePath("fonts/WorkSans-Regular.ttf")
       },
       {
         fontWeight: "medium",
-        src: "/fonts/WorkSans-Medium.ttf"
+        src: getResourcePath("fonts/WorkSans-Medium.ttf")
       },
       {
         fontWeight: "semibold",
-        src: "/fonts/WorkSans-SemiBold.ttf"
+        src: getResourcePath("fonts/WorkSans-SemiBold.ttf")
       },
       {
         fontWeight: "bold",
-        src: "/fonts/WorkSans-Bold.ttf"
+        src: getResourcePath("fonts/WorkSans-Bold.ttf")
       }
     ]
   });
@@ -31,24 +33,24 @@ export default () => {
     fonts: [
       {
         fontWeight: "normal",
-        src: "/fonts/QuattrocentoSans-Regular.ttf"
+        src: getResourcePath("fonts/QuattrocentoSans-Regular.ttf")
       },
       {
         fontWeight: "bold",
-        src: "/fonts/QuattrocentoSans-Bold.ttf"
+        src: getResourcePath("fonts/QuattrocentoSans-Bold.ttf")
       }
     ]
   });
   Font.register({
     family: "FontAwesome",
-    src: "/fonts/fa-regular-400.ttf"
+    src: getResourcePath("fonts/fa-regular-400.ttf")
   });
   Font.register({
     family: "FontAwesome-Solid",
-    src: "/fonts/fa-solid-900.ttf"
+    src: getResourcePath("fonts/fa-solid-900.ttf")
   });
   Font.register({
     family: "FontAwesome-Brands",
-    src: "/fonts/fa-brands-400.ttf"
+    src: getResourcePath("fonts/fa-brands-400.ttf")
   });
 };

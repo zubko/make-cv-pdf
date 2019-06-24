@@ -3,7 +3,7 @@ import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { theme, metrics } from "../utils";
-import { NormalText, BoldText } from "../components";
+import {NormalText,BoldText} from './Text';
 
 const ItemTitle = styled(NormalText)`
   /* background-color: ${theme.darkBg}; */

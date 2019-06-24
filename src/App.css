@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .pdf-viewer {
   position: fixed;
   width: 100%;
