@@ -12,8 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "pdf": "BABEL_ENV=node babel-node ./src/index.js ../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf",
+    "build": "BABEL_ENV=node babel-node ./src/index.js ../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -33,9 +32,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/node": "^7.4.5",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-react-app": "^9.0.0"
   }
 }
