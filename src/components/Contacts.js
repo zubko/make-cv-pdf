@@ -36,7 +36,7 @@ export default ({ style }) => (
       <StyledGlyph name="envelope" />
     </Item>
     <Item href="tel:+380963945469">
-      +380(96)3945469{"  "}
+      +380 (96) 394-54-69{"  "}
       <StyledGlyph name="phone" />
     </Item>
     <Item>

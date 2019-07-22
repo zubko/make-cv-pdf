@@ -22,8 +22,8 @@ const GroupName = styled(BoldText)`
   font-size: 13px;
 `;
 
-export default () => (
-  <Container>
+export default props => (
+  <Container {...props}>
     <Group>
       <GroupName>React Native: </GroupName>
       JavaScript, Flow, Ramda, Redux, MobX, Redux Saga, Interop with native
@@ -45,7 +45,7 @@ export default () => (
     <Group>
       <GroupName>Algorithms: </GroupName>
       took part in the competitions in Informatics in school years. Winner of
-      regional competition.
+      regional one.
     </Group>
     <Group>
       <GroupName>General: </GroupName>

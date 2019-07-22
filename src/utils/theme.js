@@ -1,7 +1,7 @@
 // @flow
 
 export const colors = {
-  header: "indigo",
+  header: "#2C8127",
   lightBg: "white",
   middleBg: "lightgray",
   darkBg: "#263547",
@@ -12,8 +12,8 @@ export const colors = {
 
 export const fonts = {
   normal: 12,
-  h1: 29.25,
-  h2: 19.5,
+  h1: 29,
+  h2: 19,
   lineHeight: 1.25
 };
 
@@ -28,7 +28,7 @@ function paddingTop(times: number) {
 // instead of centering the text in the line
 // so bottom padding should be smaller to compensate that
 function paddingBottom(times: number) {
-  return `${3 * times}px`;
+  return `${4 * times}px`;
 }
 export const metrics = {
   padding(times: number) {

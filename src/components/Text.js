@@ -13,6 +13,10 @@ export const BoldText = styled(NormalText)`
   font-weight: bold;
 `;
 
+export const ItalicText = styled(NormalText)`
+  font-style: italic;
+`;
+
 export const H1 = styled(Text)`
   font-family: "Title";
   font-size: ${fonts.h1};

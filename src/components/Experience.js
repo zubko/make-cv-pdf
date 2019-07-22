@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import {colors, metrics} from "../utils/theme";
-import { NormalText, BoldText } from "./Text";
+import { colors, metrics } from "../utils/theme";
+import { NormalText, BoldText, ItalicText } from "./Text";
 
 const ItemTitle = styled(NormalText)`
   /* background-color: ${colors.darkBg}; */
@@ -37,18 +37,29 @@ const Item = ({
     }
   >
     <ItemTitle style={isSubsection ? subSectionPadding : null}>
-      <BoldText>{title}</BoldText> | {dates ? dates + " | " : null}
+      <BoldText>{title}</BoldText>
+      {" / "}
+      {dates ? (
+        <>
+          <Dates>{dates}</Dates>
+          {" / "}
+        </>
+      ) : null}
       {company}
     </ItemTitle>
     <View style={isSubsection ? subSectionPadding : null}>{children}</View>
   </Container>
 );
 const subSectionPadding = {
-  paddingLeft: 40
+  paddingLeft: 30
 };
 
-export default () => (
-  <View>
+const Dates = styled(ItalicText)`
+  opacity: 0.8;
+`;
+
+export default props => (
+  <View {...props}>
     <SectionTitle>Related work experience:</SectionTitle>
     <Item
       title="React Native Team Lead"
@@ -123,11 +134,11 @@ export default () => (
         restructure.
       </NormalText>
     </Item>
-    <SectionTitle>Other programming experience:</SectionTitle>
+    <SectionTitle>Other work experience:</SectionTitle>
     <Item
       title="C++ Windows Mobile, PC & Mac Game & App Developer"
       dates="Aug'06 - Dec'10"
-      company="3 companies, Kiev, Ukraine"
+      company="Kiev, Ukraine"
       isLastItem
     >
       <NormalText>

@@ -18,7 +18,7 @@ const MainArea = styled(View)`
   flex: 1;
   flex-direction: column;
   margin-left: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 10px;
 `;
 const StyledContacts = styled(Contacts)`
@@ -30,8 +30,8 @@ const Photo = styled(Image)`
   margin-left: 20px;
 `;
 
-export default () => (
-  <Container>
+export default props => (
+  <Container {...props}>
     <Photo src={getResourcePath("photo.png")} />
     <MainArea>
       <H1>Alexander Zubko</H1>

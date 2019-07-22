@@ -11,11 +11,11 @@ const Container = styled(View)`
   padding: ${metrics.padding(1)};
 `;
 
-export default () => (
-  <Container>
+export default props => (
+  <Container {...props}>
     <NormalText>
-      <BoldText>Goal:</BoldText> Develop great apps and products as a part of a
-      great team.
+      <BoldText>Goal:</BoldText> Develop great mobile apps and products as a
+      part of a great team.
     </NormalText>
   </Container>
 );

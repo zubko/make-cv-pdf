@@ -33,11 +33,16 @@ export default () => {
     fonts: [
       {
         fontWeight: "normal",
-        src: getResourcePath("fonts/QuattrocentoSans-Regular.ttf")
+        src: getResourcePath("fonts/Raleway-Regular.ttf")
+      },
+      {
+        fontWeight: "normal",
+        fontStyle: "italic",
+        src: getResourcePath("fonts/Raleway-RegularItalic.ttf")
       },
       {
         fontWeight: "bold",
-        src: getResourcePath("fonts/QuattrocentoSans-Bold.ttf")
+        src: getResourcePath("fonts/Raleway-Bold.ttf")
       }
     ]
   });
