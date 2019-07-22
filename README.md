@@ -28,6 +28,8 @@ Instead of drawing the CV in Sketch or Canva or making it with some word process
 
 👎 Less flexible/powerful formatting and styling compared to HTML/CSS.
 
+👎 Harder style debugging while working on a document. It's not possible to inspect an element in the browser since it's a pdf document. It has some simple its own debug tools.
+
 👍 More predictable styling and rendering.
 
 👍 Client side rendering is possible.
@@ -38,10 +40,10 @@ Instead of drawing the CV in Sketch or Canva or making it with some word process
 
 You can use this project as a starting point or a reference to save some configuration time.
 
-The main result of the generation is achieved with:
+Build it with:
 
 ```sh
-yarn pdf
+yarn build
 ```
 
 This will render a PDF document using node. The path to the file is set in `package.json`.
@@ -56,6 +58,6 @@ Keep the browser side-by-side to the code and enjoy the live-reload while editin
 
 The images and fonts can be found in the `public` folder.
 
-I didn't want to keep the PDF generation code with the website to not mix 2 different React apps under the same root. For this particular use-case it's expected that the PDF will be edited quite rarely comparing to the website where it's used, so this workflow is enough  for now and it's less complex.
+I didn't want to keep the PDF generation code together with the website to not mix 2 different React apps under the same root. For this particular use-case it's expected that the PDF will be edited quite rarely comparing to the website where it's used, so this workflow is enough for now and it's less complex.
 
 Happy hacking!
