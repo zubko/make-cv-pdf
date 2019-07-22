@@ -7,13 +7,14 @@ const Regular = styled(Text)`
 `;
 const Solid = styled(Text)`
   font-family: "FontAwesome-Solid";
-  font-size:15px;
+  font-size: 15px;
 `;
 const Brands = styled(Text)`
   font-family: "FontAwesome-Brands";
 `;
 
 const knownNames = {
+  "circle-solid": [Solid, "\uf111"],
   envelope: [Solid, "\uf0e0"],
   globe: [Solid, "\uf0ac"],
   "map-marker": [Solid, "\uf3c5"],
