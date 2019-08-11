@@ -36,7 +36,7 @@ const Item = styled(Link)`
   background-color: white;
   padding: 0.5em 0.7em;
   opacity: 0.8;
-  transition: 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
   :hover {
     opacity: 1;
     transform: translateY(-12px);
