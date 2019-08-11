@@ -2,17 +2,13 @@
   "name": "test-pdf",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@react-pdf/renderer": "1.6.1",
-    "@react-pdf/styled-components": "^1.4.0",
-    "flow-bin": "^0.100.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
-  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BABEL_ENV=node babel-node ./src/index.js ../zubko.io/static/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf",
+    "develop": "react-scripts start",
+    "build": "BABEL_ENV=node babel-node ./src/index.js",
+    "build:mobile": "yarn build --document=mobile",
+    "build:web": "yarn build --document=web",
+    "build:all": "yarn build:mobile && yarn build:web",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -31,6 +27,15 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@react-pdf/renderer": "1.6.1",
+    "@react-pdf/styled-components": "^1.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.3.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -38,6 +43,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-preset-react-app": "^9.0.0"
+    "babel-preset-react-app": "^9.0.0",
+    "flow-bin": "^0.105.1"
   }
 }

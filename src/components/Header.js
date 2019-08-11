@@ -9,6 +9,21 @@ import Contacts from "./Contacts";
 import { H1, H2 } from "./Text";
 import getResourcePath from "../utils/getResourcePath";
 
+type Props = {
+  title: string
+};
+
+export default ({ title, ...otherProps }: Props) => (
+  <Container {...otherProps}>
+    <Photo src={getResourcePath("photo.png")} />
+    <MainArea>
+      <H1>Alexander Zubko</H1>
+      <H2>{title}</H2>
+    </MainArea>
+    <StyledContacts />
+  </Container>
+);
+
 const Container = styled(View)`
   background-color: ${colors.header};
   color: white;
@@ -29,14 +44,3 @@ const Photo = styled(Image)`
   object-fit: contain;
   margin-left: 20px;
 `;
-
-export default props => (
-  <Container {...props}>
-    <Photo src={getResourcePath("photo.png")} />
-    <MainArea>
-      <H1>Alexander Zubko</H1>
-      <H2>Mobile Apps Developer with Web and Node.js skills</H2>
-    </MainArea>
-    <StyledContacts />
-  </Container>
-);

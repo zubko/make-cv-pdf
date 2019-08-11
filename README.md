@@ -36,6 +36,16 @@ Instead of drawing the CV in Sketch or Canva or making it with some word process
 
 </ul>
 
+### Multiple documents
+
+There is a small interface to make it possible to render different documents:
+
+- Each document should have a file or folder in the `documents` folder. If it's a folder it should have an `index.js` file.
+
+- Each document should export a component as its `default` export. This component should render React PDF `Document` with some children.
+
+- Each document should export `buildPath` string pointing to where the document should be saved after building.
+
 ### Setup
 
 You can use this project as a starting point or a reference to save some configuration time.
@@ -43,10 +53,22 @@ You can use this project as a starting point or a reference to save some configu
 Build it with:
 
 ```sh
-yarn build
+yarn build --document=%%DOC_NAME%%
 ```
 
-This will render a PDF document using node. The path to the file is set in `package.json`.
+or predefined
+
+```sh
+yarn build:mobile
+```
+
+or everything
+
+```sh
+yarn build:all
+```
+
+This will render a PDF document using node.
 
 And it is also possible (and important) to be able to preview the document while editing it. I've used `create-react-app` for that, so run as usual:
 
@@ -54,10 +76,20 @@ And it is also possible (and important) to be able to preview the document while
 yarn start
 ```
 
+or
+
+```
+yarn develop
+```
+
 Keep the browser side-by-side to the code and enjoy the live-reload while editing.
+
+There is simple static solution based on React Router to provide a rendering of different documents. The main idea is to be able to see both documents side by side while they are edited in case if styling changes are applied to both of them.
+
+The root page will show a menu. And each document is accessible under its own path. For example `http://localhost:3000/web` is for Web Dev CV.
 
 The images and fonts can be found in the `public` folder.
 
-I didn't want to keep the PDF generation code together with the website to not mix 2 different React apps under the same root. For this particular use-case it's expected that the PDF will be edited quite rarely comparing to the website where it's used, so this workflow is enough for now and it's less complex.
+The idea to keep the PDF generation separate from the website is to not mix 2 different React apps / environments under the same root.
 
 Happy hacking!
