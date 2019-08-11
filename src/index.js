@@ -18,5 +18,8 @@ if (env.isNode) {
   ReactPDF.render(<Document />, fullPath);
 } else {
   const App = require("./App").default;
-  ReactDOM.render(<App />, document.getElementById("root"));
+  const root = document.getElementById("root");
+  if (root) {
+    ReactDOM.render(<App />, root);
+  }
 }

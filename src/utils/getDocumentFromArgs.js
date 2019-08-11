@@ -6,10 +6,11 @@
 
 import * as React from "react";
 
-type Result = {
+type Result = {|
   Document: React.ComponentType<any>,
-  buildPath: string
-};
+  buildPath: string,
+  name: string
+|};
 
 const ARGUMENT_NAME = "--document=";
 
@@ -22,6 +23,7 @@ export default function getDocumentFromArgs(): Result {
   }
   const docName = docArgument.substr(ARGUMENT_NAME.length);
   const capitalizedDocName = docName[0].toUpperCase() + docName.substr(1);
+  //$FlowFixMe - Flow doesn't like dynamic imports
   const imported = require(`../documents/${capitalizedDocName}`);
   return {
     Document: imported.default,
