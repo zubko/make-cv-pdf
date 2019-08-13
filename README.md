@@ -84,9 +84,7 @@ yarn develop
 
 Keep the browser side-by-side to the code and enjoy the live-reload while editing.
 
-There is simple static solution based on React Router to provide a rendering of different documents. The main idea is to be able to see both documents side by side while they are edited in case if styling changes are applied to both of them.
-
-The root page will show a menu. And each document is accessible under its own path. For example `http://localhost:3000/web` is for Web Dev CV.
+For the browser there is a React Router based solution to provide a rendering of different documents. It's possible to open different documents in different tabs and compare them side by side while they are edited. The root page will show a menu with the items found in the `documents` folder. And each document is accessible under its own path. For example `http://localhost:3000/web` is for Web Dev CV. List of available documents is collected at the build time thanks to [import-all.macro](https://github.com/kentcdodds/import-all.macro).
 
 The images and fonts can be found in the `public` folder.
 

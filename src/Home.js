@@ -1,14 +1,25 @@
 // @flow
-
 import * as React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import {
+  getAllDocumentsPaths,
+  getNameFromPath,
+  getRouteFromPath
+} from "./utils/documentsComponents";
+
 export default (props: Object) => {
+  const paths = getAllDocumentsPaths();
   return (
     <Container {...props}>
-      <Item to="/web">CV for Web</Item>
-      <Item to="/mobile">CV for Mobile</Item>
+      {paths.length
+        ? paths.map(path => (
+            <Item key={path} to={getRouteFromPath(path)}>
+              {getNameFromPath(path)}
+            </Item>
+          ))
+        : "No documents found. Make sure there are some in the documents folder."}
     </Container>
   );
 };
@@ -19,14 +30,15 @@ const Container = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 100vh;
+  padding-bottom: 1em;
 `;
 
 const Item = styled(Link)`
   display: block;
-  width: 30vw;
-  height: 70vh;
+  width: 8em;
+  height: 10em;
   border: 1px solid black;
+  margin: 1em 0 0;
   box-shadow: 4px 4px 0px 0px #000000;
   text-decoration-style: wavy;
   font-size: 200%;
