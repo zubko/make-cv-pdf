@@ -9,7 +9,7 @@ export default (props: Object) => (
     <SectionTitle>Related work experience:</SectionTitle>
     <Item
       title="React TypeScript Developer"
-      dates="Mar'21 - Dec'21"
+      dates="Mar'20 - Dec'20"
       company="Coursera, USA & Bulgaria"
     >
       <ItemText>
@@ -43,7 +43,7 @@ export default (props: Object) => (
     </Item>
     <Item
       title="- React Native Developer"
-      dates="Aug'20 - Feb'21"
+      dates="Aug'19 - Feb'20"
       company="CouldBeUs, USA"
       isSubsection
     >
@@ -57,7 +57,7 @@ export default (props: Object) => (
     <Item
       title="- iOS React Native & Android Native Developer"
       dates="Jul'17 - Dec'17"
-      company="Amila, Toronto, Canada"
+      company="Amila, Canada"
       isSubsection
     >
       <ItemText>
@@ -69,7 +69,7 @@ export default (props: Object) => (
     <Item
       title="- iOS Native Team Lead"
       dates="May'15 - Dec'16"
-      company="Brownie Points, San Mateo, CA, USA"
+      company="Brownie Points, USA"
       isSubsection
     >
       <ItemText>
@@ -88,7 +88,7 @@ export default (props: Object) => (
     <Item
       title="iOS Native Developer"
       dates="Feb'11 - Aug'11"
-      company="SoftServe, Lviv, Ukraine"
+      company="SoftServe, Ukraine"
       isLastItem
     >
       <ItemText>
