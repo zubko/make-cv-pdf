@@ -20,9 +20,10 @@ const knownNames = {
   "map-marker": [Solid, "\uf3c5"],
   phone: [Solid, "\uf095"],
   skype: [Brands, "\uf17e"],
+  "square-solid": [Solid, "\uf0c8"],
   "star-half-solid": [Solid, "\uf089"],
   "star-solid": [Solid, "\uf005"],
-  star: [Regular, "\uf005"]
+  star: [Regular, "\uf005"],
 };
 
 export default ({ code = "", name = "", style }) => {
