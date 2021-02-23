@@ -28,13 +28,13 @@
     ]
   },
   "dependencies": {
-    "@react-pdf/renderer": "1.6.1",
+    "@react-pdf/renderer": "1.6.12",
     "@react-pdf/styled-components": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -45,6 +45,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-preset-react-app": "^9.0.0",
     "flow-bin": "^0.105.1",
-    "import-all.macro": "^2.0.3"
+    "import-all.macro": "^2.0.3",
+    "prettier": "2.2.1"
   }
 }

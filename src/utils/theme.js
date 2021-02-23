@@ -7,14 +7,14 @@ export const colors = {
   darkBg: "#263547",
 
   lightText: "#f5f5f5",
-  darkText: "#111"
+  darkText: "#111",
 };
 
 export const fonts = {
   normal: 12,
   h1: 29,
   h2: 19,
-  lineHeight: 1.25
+  lineHeight: 1.25,
 };
 
 // big horz padding because printers usually print with margins
@@ -22,7 +22,7 @@ function paddingHorz(times: number) {
   return `${14 * times}px`;
 }
 function paddingTop(times: number) {
-  return `${6 * times}px`;
+  return `${4 * times}px`;
 }
 // lineHeight makes extra space below the text
 // instead of centering the text in the line
@@ -36,5 +36,5 @@ export const metrics = {
   },
   paddingTop,
   paddingBottom,
-  paddingHorz
+  paddingHorz,
 };

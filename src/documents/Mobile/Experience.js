@@ -2,10 +2,24 @@
 import React from "react";
 import { View } from "@react-pdf/renderer";
 import { SectionTitle, Item, ItemText } from "../../components/Experience";
+import SomeClientsNotice from "./SomeClientsNotice";
 
 export default (props: Object) => (
   <View {...props}>
     <SectionTitle>Related work experience:</SectionTitle>
+    <Item
+      title="React TypeScript Developer"
+      dates="Mar'21 - Dec'21"
+      company="Coursera, USA & Bulgaria"
+    >
+      <ItemText>
+        Worked on a new functionality of the Coursera Web app as a part of
+        Coursera Bulgaria. My main area was implementing accessibility
+        requirements of WCAG standard. I was also working on adding new
+        features, redesigning / modernizing the UI and improving the developer
+        experience.
+      </ItemText>
+    </Item>
     <Item
       title="React Native Team Lead"
       dates="Mar'18 - Apr'19"
@@ -14,25 +28,30 @@ export default (props: Object) => (
       <ItemText>
         Made a configurable framework on top of React Native to be used to make
         apps which work with CiviCRM backend. Used this framework to build 2
-        apps for the company. Configured and fixed native libraries. Lead a team
-        of 2-4 mobile developers. Delivered first release in 2 months. Provided
-        maximum code reuse and easy dev switch between the apps. Created modular
-        and configurable architecture, easy to start for a new developer on the
-        team, easy to understand what is where and how to add new features.
+        apps for the company. Configured and fixed native libraries. Led a team
+        of 2-4 mobile developers. Delivered first release in 2 months. Created
+        modular and configurable architecture with a sharable common code
+        between apps and an easy switch for developer to work on a certain one.
       </ItemText>
     </Item>
     <Item
-      title="iOS / Android / React Native Developer & Team Lead"
+      title="React Native / iOS / Android Developer & Team Lead"
       dates="Aug'11 - Present"
       company="Freelance"
     >
+      <SomeClientsNotice />
+    </Item>
+    <Item
+      title="- React Native Developer"
+      dates="Aug'20 - Feb'21"
+      company="CouldBeUs, USA"
+      isSubsection
+    >
       <ItemText>
-        Helped clients to finalize requirements, estimated costs. Planned and
-        Implemented apps' architecture and features from the beginning to the
-        App Store and continued working and improving the apps. Fixed and
-        supported apps started by other developers. Provided maximum customer
-        satisfaction. 5/5 stars Upwork rating for all jobs. Worked in a team or
-        solo. Worked on more than 10 apps in total. Some clients:
+        Fixed and improved MVP of a dating app. Transitioned from Expo to Bare
+        app to support features that required native code. Added new features.
+        Worked on the simple backend that was running on Firebase storage with
+        cloud functions.
       </ItemText>
     </Item>
     <Item

@@ -10,7 +10,7 @@ import { H1, H2 } from "./Text";
 import getResourcePath from "../utils/getResourcePath";
 
 type Props = {
-  title: string
+  title: string,
 };
 
 export default ({ title, ...otherProps }: Props) => (
@@ -33,11 +33,11 @@ const MainArea = styled(View)`
   flex: 1;
   flex-direction: column;
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 `;
 const StyledContacts = styled(Contacts)`
-  margin: 15px 20px 10px;
+  margin: 10px 20px 10px;
 `;
 const Photo = styled(Image)`
   width: 60px;

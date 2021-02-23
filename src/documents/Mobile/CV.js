@@ -11,9 +11,9 @@ import Experience from "./Experience";
 const CV = () => (
   <Document size="A4" title="CV-Alexander-Zubko-iOS-Android-ReactNative">
     <StyledPage>
-      <Header title="Mobile Apps Developer with Web and Node.js skills" />
+      <Header title="Mobile And Web Apps Developer" />
       <Goal>
-        Develop great mobile apps and products as a part of a great team.
+        Develop great front end experiences.
       </Goal>
       <Skills />
       <Experience />
