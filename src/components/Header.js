@@ -34,10 +34,10 @@ const MainArea = styled(View)`
   flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 `;
 const StyledContacts = styled(Contacts)`
-  margin: 10px 20px 10px;
+  margin: 10px 20px 4px;
 `;
 const Photo = styled(Image)`
   width: 60px;

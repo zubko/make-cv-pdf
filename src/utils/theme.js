@@ -12,8 +12,8 @@ export const colors = {
 
 export const fonts = {
   normal: 12,
-  h1: 29,
-  h2: 19,
+  h1: 25,
+  h2: 15,
   lineHeight: 1.25,
 };
 

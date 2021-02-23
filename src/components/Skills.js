@@ -8,6 +8,7 @@ export const Container = styled(View)`
   background-color: ${colors.darkBg};
   color: ${colors.lightText};
   padding: ${metrics.padding(1)};
+  padding-top: ${metrics.paddingTop(2)};
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
