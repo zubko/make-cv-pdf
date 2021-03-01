@@ -40,6 +40,10 @@ export default (props: Object) => (
       company="Freelance"
     >
       <SomeClientsNotice />
+      <ItemText>
+        Worked with a number of clients from different countries on mobile apps
+        using either native frameworks or React Naive.
+      </ItemText>
     </Item>
     <Item
       title="- React Native Developer"

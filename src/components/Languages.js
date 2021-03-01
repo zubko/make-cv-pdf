@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Link } from "@react-pdf/renderer";
+import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { colors, metrics } from "../utils/theme";

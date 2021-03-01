@@ -11,24 +11,24 @@ export const colors = {
 };
 
 export const fonts = {
-  normal: 12,
+  normal: 10,
   h1: 25,
   h2: 15,
-  lineHeight: 1.25,
+  lineHeight: 1.45,
 };
 
 // big horz padding because printers usually print with margins
 function paddingHorz(times: number) {
-  return `${14 * times}px`;
+  return `${16 * times}px`;
 }
 function paddingTop(times: number) {
-  return `${4 * times}px`;
+  return `${8 * times}px`;
 }
 // lineHeight makes extra space below the text
 // instead of centering the text in the line
 // so bottom padding should be smaller to compensate that
 function paddingBottom(times: number) {
-  return `${4 * times}px`;
+  return `${8 * times}px`;
 }
 export const metrics = {
   padding(times: number) {

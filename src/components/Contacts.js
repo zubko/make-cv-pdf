@@ -4,16 +4,17 @@ import styled from "@react-pdf/styled-components";
 
 import Glyph from "./Glyph";
 import { NormalText } from "./Text";
+import { fonts } from "../utils/theme";
 
 const Container = styled(View)`
   align-items: flex-end;
   line-height: 1.2;
 `;
 const ItemText = styled(NormalText)`
-  font-size: 12.5px;
+  font-size: ${fonts.normal * 1.1};
 `;
 const StyledGlyph = styled(Glyph)`
-  font-size: 13px;
+  font-size: ${fonts.normal * 1.2};
 `;
 
 const Item = ({ children, href = "" }) => {

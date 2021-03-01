@@ -10,13 +10,15 @@ import Glyph from "./Glyph";
 const Container = styled(View)`
   background-color: ${colors.middleBg};
   padding: ${metrics.padding(1)};
+  padding-top: ${metrics.paddingTop(0.8)};
+  padding-bottom: ${metrics.paddingBottom(0.6)};
   flex-direction: row;
   justify-content: flex-start;
 `;
 
 const Links = styled(View)`
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex: 1;
   align-items: center;
   align-content: center;
@@ -33,7 +35,7 @@ const StyledGlyph = styled(Glyph)`
   opacity: 0.7;
 `;
 
-export default props => (
+export default (props) => (
   <Container {...props}>
     <BoldText>Code: </BoldText>
     <Links>

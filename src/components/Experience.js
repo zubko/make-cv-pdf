@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react';
-import { View } from '@react-pdf/renderer';
-import styled from '@react-pdf/styled-components';
+import * as React from "react";
+import { View } from "@react-pdf/renderer";
+import styled from "@react-pdf/styled-components";
 
-import { colors, metrics } from '../utils/theme';
-import { NormalText, BoldText, ItalicText } from './Text';
+import { colors, metrics } from "../utils/theme";
+import { NormalText, BoldText, ItalicText } from "./Text";
 
 type ItemProps = {
   title: string,
@@ -18,7 +18,7 @@ type ItemProps = {
 
 export const SectionTitle = styled(NormalText)`
   padding: ${metrics.padding(1)};
-  padding-top: ${metrics.paddingTop(0.5)};
+  padding-top: ${metrics.paddingTop(0.8)};
   padding-bottom: ${metrics.paddingBottom(0.5)};
   background-color: ${colors.middleBg};
 `;
@@ -42,11 +42,11 @@ export const Item = ({
   >
     <ItemTitle style={isSubsection ? subSectionPadding : null}>
       <BoldText>{title}</BoldText>
-      {' / '}
+      {" / "}
       {dates ? (
         <>
           <Dates>{dates}</Dates>
-          {company ? ' / ' : null}
+          {company ? " / " : null}
         </>
       ) : null}
       {company}

@@ -7,8 +7,8 @@ export default (props: Object) => (
   <Container {...props}>
     <Group>
       <GroupName>React / React Native: </GroupName>
-      TypeScript, JavaScript, Redux, MobX, Redux Saga, CSS, Styled Components,
-      Interop with native code.
+      TypeScript, JavaScript, Ramda, Redux, MobX, Redux Saga, (S)CSS, Styled
+      Components, Interop with native code.
     </Group>
     <Group>
       <GroupName>iOS: </GroupName>
