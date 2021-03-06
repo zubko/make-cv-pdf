@@ -1,8 +1,9 @@
 // @flow
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
-import { colors, metrics, fonts } from "../utils/theme";
-import { NormalText, BoldText } from "./Text";
+
+import { colors, metrics, fonts } from "../../../utils/theme";
+import { NormalText, BoldText } from "../../../components/Text";
 
 export const Container = styled(View)`
   background-color: ${colors.darkBg};

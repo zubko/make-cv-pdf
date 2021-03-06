@@ -2,7 +2,8 @@
 
 import React from "react";
 import { StyleSheet, Text } from "@react-pdf/renderer";
-import { fonts } from "../../utils/theme";
+
+import { fonts } from "../../../utils/theme";
 
 /**
  * styled-components fails to translate the `transform:rotate()` style

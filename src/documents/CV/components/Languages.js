@@ -2,10 +2,9 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { colors, metrics } from "../utils/theme";
-
-import { NormalText, BoldText, ItalicText } from "./Text";
-import Glyph from "./Glyph";
+import { colors, metrics } from "../../../utils/theme";
+import { NormalText, BoldText, ItalicText } from "../../../components/Text";
+import Glyph from "../../../components/Glyph";
 
 const Container = styled(View)`
   background-color: ${colors.lightBg};

@@ -2,9 +2,9 @@ import * as React from "react";
 import { View, Link } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import Glyph from "./Glyph";
-import { NormalText } from "./Text";
-import { fonts } from "../utils/theme";
+import Glyph from "../../../components/Glyph";
+import { NormalText } from "../../../components/Text";
+import { fonts } from "../../../utils/theme";
 
 const Container = styled(View)`
   align-items: flex-end;

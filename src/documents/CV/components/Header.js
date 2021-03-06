@@ -3,11 +3,11 @@ import * as React from "react";
 import { View, Image } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { colors, fonts } from "../utils/theme";
-import getResourcePath from "../utils/getResourcePath";
+import { colors, fonts } from "../../../utils/theme";
+import getResourcePath from "../../../utils/getResourcePath";
+import { H1, H2 } from "../../../components/Text";
 
 import Contacts from "./Contacts";
-import { H1, H2 } from "./Text";
 
 type Props = {
   title: string,

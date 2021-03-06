@@ -1,7 +1,8 @@
 // @flow
 import React from "react";
 import { View } from "@react-pdf/renderer";
-import { SectionTitle, Item, ItemText } from "../../components/Experience";
+
+import { SectionTitle, Item, ItemText } from "./Experience";
 import SomeClientsNotice from "./SomeClientsNotice";
 
 export default (props: Object) => (

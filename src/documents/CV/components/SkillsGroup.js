@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 
-import { Container, Group, GroupName } from "../../components/Skills";
+import { Container, Group, GroupName } from "./Skills";
 
 export default (props: Object) => (
   <Container {...props}>
