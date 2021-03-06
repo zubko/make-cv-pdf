@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "develop": "react-scripts start",
-    "build": "BABEL_ENV=node babel-node ./src/index.js",
-    "build:mobile": "yarn build --document=mobile",
+    "develop": "yarn start",
+    "build:general": "BABEL_ENV=node babel-node ./src/index.js",
+    "build:cv": "yarn build:general --document=cv",
+    "build": "yarn build:cv",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

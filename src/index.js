@@ -11,9 +11,14 @@ registerFonts();
 
 if (env.isNode) {
   const path = require("path");
+  const fs = require("fs");
   const getDocumentFromArgs = require("./utils/getDocumentFromArgs").default;
-  const { Document, buildPath, name } = getDocumentFromArgs();
-  const fullPath = path.resolve(buildPath);
+  const { Document, name } = getDocumentFromArgs();
+  const buildPath = path.resolve(`./build`);
+  if (!fs.existsSync(buildPath)) {
+    fs.mkdirSync(buildPath);
+  }
+  const fullPath = path.resolve(`${buildPath}/${name}.pdf`);
   console.log(`Saving '${name}' to`, fullPath);
   ReactPDF.render(<Document />, fullPath);
 } else {
