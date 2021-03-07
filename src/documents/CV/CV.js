@@ -10,7 +10,7 @@ import SkillsGroup from "./components/SkillsGroup";
 import ExperienceGroup from "./components/ExperienceGroup";
 
 const CV = () => (
-  <Document size="A4" title="CV-Alexander-Zubko-iOS-Android-ReactNative">
+  <Document size="A4" title="CV-Alexander-Zubko-Mobile-Web">
     <StyledPage>
       <Header title="Mobile & Web Apps Developer" />
       <SkillsGroup />

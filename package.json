@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "develop": "yarn start",
     "build:general": "BABEL_ENV=node babel-node ./src/index.js",
-    "build:cv": "yarn build:general --document=cv",
+    "build:cv": "yarn build:general --document=CV",
     "build": "yarn build:cv",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

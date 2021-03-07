@@ -22,11 +22,10 @@ export default function getDocumentFromArgs(): Result {
     );
   }
   const docName = docArgument.substr(ARGUMENT_NAME.length);
-  const capitalizedDocName = docName[0].toUpperCase() + docName.substr(1);
   //$FlowFixMe - Flow doesn't like parametrized require
-  const imported = require(`../documents/${capitalizedDocName}`);
+  const imported = require(`../documents/${docName}`);
   return {
     Document: imported.default,
-    name: docName,
+    name: imported.name || docName,
   };
 }
