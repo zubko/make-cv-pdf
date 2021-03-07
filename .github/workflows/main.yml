@@ -1,0 +1,47 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '10'
+      - name: Install Yarn
+        run: npm i -g --force yarn
+        
+      - name: Install dependencies
+        run: yarn install
+        
+      - name: Build the document
+        run: yarn build
+
+      - name: Push to zubko.io repo
+        uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'build/CV-Alexander-Zubko-Mobile-Web.pdf'
+          destination_repo: 'zubko/zubko.io'
+          destination_folder: 'static'
+          user_email: 'alexander.zubko@gmail.com'
+          user_name: 'zubko'
+          commit_message: '🤖 Update CV (from CI)'
+       
