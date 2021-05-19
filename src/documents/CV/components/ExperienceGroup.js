@@ -14,7 +14,7 @@ export default (props: Object) => (
       company="Coursera, USA & Bulgaria"
     >
       <ItemText>
-        Worked on a new functionality of the Coursera Web app as a part of
+        Worked on a new functionality of the Coursera Labs Web app as a part of
         Coursera Bulgaria. My main area was implementing accessibility
         requirements of WCAG standard. I was also working on adding new
         features, redesigning / modernizing the UI and improving the developer
@@ -23,16 +23,19 @@ export default (props: Object) => (
     </Item>
     <Item
       title="React Native Team Lead"
-      dates="Mar'18 - Apr'19"
+      dates="Mar'18 - Apr'19, Mar'21 - Present"
       company="Agiliway, Ukraine"
     >
       <ItemText>
-        Made a configurable framework on top of React Native to be used to make
-        apps which work with CiviCRM backend. Used this framework to build 2
-        apps for the company. Configured and fixed native libraries. Led a team
-        of 2-4 mobile developers. Delivered first release in 2 months. Created
-        modular and configurable architecture with a sharable common code
-        between apps and an easy switch for developer to work on a certain one.
+        Made a modular and configurable architecture with a sharable common code
+        between apps which work with CiviCRM backend. Used this framework to
+        build 2 apps for the company. Led a team of 2-4 mobile developers.
+      </ItemText>
+      <ItemText>
+        Then later I've re-joined the company to help with more challenging
+        tasks for the apps that I've made and for other mobile apps of the
+        company. (Upgrading RN version, setting up CI/CD, code review,
+        integrating audio streaming etc)
       </ItemText>
     </Item>
     <Item
@@ -53,10 +56,10 @@ export default (props: Object) => (
       isSubsection
     >
       <ItemText>
-        Fixed and improved MVP of a dating app. Transitioned from Expo to Bare
-        app to support features that required native code. Added new features.
-        Worked on the simple backend that was running on Firebase storage with
-        cloud functions.
+        Fixed and improved MVP of a dating app. Transitioned from Expo Managed
+        to Bare app to support features that required native code. Added new
+        features. Worked on the simple backend that was running on Firebase
+        storage with cloud functions.
       </ItemText>
     </Item>
     <Item
@@ -73,7 +76,7 @@ export default (props: Object) => (
     </Item>
     <Item
       title="- iOS Native Team Lead"
-      dates="May'15 - Dec'16"
+      dates="Dec'11 - Aug'12 / Apr'13 - Oct'15 / Aug'16 - Feb'17"
       company="Brownie Points, USA"
       isSubsection
     >
@@ -83,11 +86,10 @@ export default (props: Object) => (
         optimistic and background communication with its backend everywhere
         where possible. All scrolling and screen switching was smooth and
         interesting to the eye. Parents and kids loved the app, we had 4.5 star
-        rating in the AppStore. I also created varies tools and scripts to help
-        with the development. For example we had a tool to generate the initial
-        data with which the users will get the app. There was a tool to
-        eliminate unused images and another one to analyze not critical error
-        reports that were sent from the app to our backend.
+        rating in the AppStore. I also created tools and scripts to help with
+        the development (generating the initial Core Data DB to use after
+        install, eliminating unused images, helping analyzing reported errors
+        etc).
       </ItemText>
     </Item>
     <Item

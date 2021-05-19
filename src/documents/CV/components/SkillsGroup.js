@@ -8,20 +8,25 @@ export default (props: Object) => (
     <Group>
       <GroupName>React / React Native: </GroupName>
       TypeScript, JavaScript, Ramda, Redux, MobX, Redux Saga, (S)CSS, Styled
-      Components, Interop with native code.
+      Components, Browser DOM, Interop with native code.
     </Group>
     <Group>
       <GroupName>iOS: </GroupName>
       Objective-C, Swift, Xcode, Apple and 3rd party frameworks, Instruments,
-      CocoaPods.
+      CocoaPods, Fastlane.
     </Group>
     <Group>
       <GroupName>Android: </GroupName>
-      Java, Kotlin, Android Studio, Gradle, Android Libraries.
+      Java, Kotlin, Android Studio, Gradle, Android libraries.
     </Group>
     <Group>
       <GroupName>General: </GroupName>
-      Data structures and algorithms, Git, CI, FP, DRY, YAGNI, SOLID.
+      Accessibility, Data structures and algorithms, Git, CI/CD, FP, DRY, YAGNI,
+      SOLID.
+    </Group>
+    <Group>
+      <GroupName>Basic level but interested in: </GroupName>
+      GraphQL, Backends & DBs, Firebase, UI/UX design.
     </Group>
   </Container>
 );

@@ -11,8 +11,8 @@ export const colors = {
 };
 
 export const fonts = {
-  normal: 10,
-  h1: 25,
+  normal: 10.5,
+  h1: 22,
   h2: 15,
   lineHeight: 1.45,
 };
@@ -28,11 +28,18 @@ function paddingTop(times: number) {
 // instead of centering the text in the line
 // so bottom padding should be smaller to compensate that
 function paddingBottom(times: number) {
-  return `${8 * times}px`;
+  return `${4 * times}px`;
 }
 export const metrics = {
-  padding(times: number) {
-    return `${paddingTop(times)} ${paddingHorz(times)} ${paddingBottom(times)}`;
+  padding(
+    timesTop: number,
+    timesHorz: number = undefined,
+    timesBottom: number = undefined
+  ) {
+    const top = timesTop;
+    const horz = typeof timesHorz !== "undefined" ? timesHorz : timesTop;
+    const bottom = typeof timesBottom !== "undefined" ? timesBottom : timesTop;
+    return `${paddingTop(top)} ${paddingHorz(horz)} ${paddingBottom(bottom)}`;
   },
   paddingTop,
   paddingBottom,

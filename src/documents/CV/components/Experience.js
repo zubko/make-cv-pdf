@@ -17,9 +17,7 @@ type ItemProps = {
 };
 
 export const SectionTitle = styled(NormalText)`
-  padding: ${metrics.padding(1)};
-  padding-top: ${metrics.paddingTop(0.8)};
-  padding-bottom: ${metrics.paddingBottom(0.5)};
+  padding: ${metrics.padding(0.8, 1, 0.5)};
   background-color: ${colors.middleBg};
 `;
 
@@ -68,7 +66,7 @@ export const ItemSubTitle = styled(ItalicText)`
 `;
 
 const Container = styled(View)`
-  padding: ${metrics.padding(1)};
+  padding: ${metrics.padding(0.5, 1, 1)};
 `;
 
 const ItemTitle = styled(NormalText)`

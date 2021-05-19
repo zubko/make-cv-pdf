@@ -18,7 +18,7 @@ export default ({ title, ...otherProps }: Props) => (
     <Photo src={getResourcePath("photo.png")} />
     <MainArea>
       <Name>Alexander Zubko</Name>
-      <H2>{title}</H2>
+      <H2>React Native & React Developer</H2>
     </MainArea>
     <StyledContacts />
   </Container>
