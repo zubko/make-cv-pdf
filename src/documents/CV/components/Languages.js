@@ -3,10 +3,10 @@ import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { colors, metrics } from "../../../utils/theme";
-import { NormalText, BoldText, ItalicText } from "../../../components/Text";
-import Glyph from "../../../components/Glyph";
+import { NormalText, BoldText } from "../../../components/Text";
+import { Glyph } from "../../../components/Glyph";
 
-export default (props) => (
+export const Languages = (props) => (
   <Container {...props}>
     <NormalText>
       <BoldText>Languages</BoldText>
@@ -43,9 +43,5 @@ const List = styled(View)`
 
 const StyledGlyph = styled(Glyph)`
   font-size: 5;
-  opacity: 0.7;
-`;
-
-const MaxValue = styled(ItalicText)`
   opacity: 0.7;
 `;

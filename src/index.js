@@ -4,16 +4,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ReactPDF from "@react-pdf/renderer";
 
-import env from "./utils/env";
-import registerFonts from "./utils/registerFonts";
+import { Env } from "./utils/env";
+import { registerFonts } from "./utils/registerFonts";
 
 registerFonts();
 
-if (env.isNode) {
+if (Env.isNode) {
   const path = require("path");
   const fs = require("fs");
-  const getDocumentFromArgs = require("./utils/getDocumentFromArgs").default;
-  const { Document, name } = getDocumentFromArgs();
+  const {
+    Document,
+    name,
+  } = require("./utils/getDocumentFromArgs").getDocumentFromArgs();
   const buildPath = path.resolve(`./build`);
   if (!fs.existsSync(buildPath)) {
     fs.mkdirSync(buildPath);
@@ -22,7 +24,7 @@ if (env.isNode) {
   console.log(`Saving '${name}' to`, fullPath);
   ReactPDF.render(<Document />, fullPath);
 } else {
-  const App = require("./App").default;
+  const { App } = require("./App");
   const root = document.getElementById("root");
   if (root) {
     ReactDOM.render(<App />, root);

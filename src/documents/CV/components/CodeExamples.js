@@ -4,7 +4,20 @@ import styled from "@react-pdf/styled-components";
 
 import { colors, metrics } from "../../../utils/theme";
 import { NormalText, BoldText } from "../../../components/Text";
-import Glyph from "../../../components/Glyph";
+import { Glyph } from "../../../components/Glyph";
+
+export const CodeExamples = (props) => (
+  <Container {...props}>
+    <BoldText>Code: </BoldText>
+    <Links>
+      <LinkItem>https://github.com/zubko</LinkItem>
+      <StyledGlyph name="circle-solid" />
+      <LinkItem>https://codesandbox.io/u/zubko</LinkItem>
+      <StyledGlyph name="circle-solid" />
+      <LinkItem>https://codepen.io/zubko</LinkItem>
+    </Links>
+  </Container>
+);
 
 const Container = styled(View)`
   background-color: ${colors.middleBg};
@@ -33,16 +46,3 @@ const StyledGlyph = styled(Glyph)`
   font-size: 5;
   opacity: 0.7;
 `;
-
-export default (props) => (
-  <Container {...props}>
-    <BoldText>Code: </BoldText>
-    <Links>
-      <LinkItem>https://github.com/zubko</LinkItem>
-      <StyledGlyph name="circle-solid" />
-      <LinkItem>https://codesandbox.io/u/zubko</LinkItem>
-      <StyledGlyph name="circle-solid" />
-      <LinkItem>https://codepen.io/zubko</LinkItem>
-    </Links>
-  </Container>
-);

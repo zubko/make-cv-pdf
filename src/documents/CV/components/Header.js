@@ -4,16 +4,16 @@ import { View, Image } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { colors, fonts } from "../../../utils/theme";
-import getResourcePath from "../../../utils/getResourcePath";
+import { getResourcePath } from "../../../utils/getResourcePath";
 import { H1, H2 } from "../../../components/Text";
 
-import Contacts from "./Contacts";
+import { Contacts } from "./Contacts";
 
 type Props = {
   title: string,
 };
 
-export default ({ title, ...otherProps }: Props) => (
+export const Header = ({ title, ...otherProps }: Props) => (
   <Container {...otherProps}>
     <Photo src={getResourcePath("photo.png")} />
     <MainArea>

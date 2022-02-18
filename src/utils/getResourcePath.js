@@ -1,7 +1,7 @@
-import env from "./env";
+import { Env } from "./env";
 
-export default name => {
-  if (env.isNode) {
+export const getResourcePath = (name) => {
+  if (Env.isNode) {
     const path = require("path");
     return path.resolve("./public/" + name);
   } else {

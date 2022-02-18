@@ -1,16 +1,16 @@
 import React from "react";
 import { Document } from "@react-pdf/renderer";
 
-import StyledPage from "../../components/StyledPage";
+import { StyledPage } from "../../components/StyledPage";
 
-import Header from "./components/Header";
-import CodeExamples from "./components/CodeExamples";
-import Languages from "./components/Languages";
-import SkillsGroup from "./components/SkillsGroup";
+import { Header } from "./components/Header";
+import { CodeExamples } from "./components/CodeExamples";
+import { Languages } from "./components/Languages";
+import { SkillsGroup } from "./components/SkillsGroup";
 import { ExperienceGroupPrimary } from "./components/ExperienceGroupPrimary";
 import { ExperienceGroupSecondary } from "./components/ExperienceGroupSecondary";
 
-const CV = () => (
+export const CV = () => (
   <Document size="A4" title="CV-Alexander-Zubko-RN-Mobile-Web">
     <StyledPage>
       <Header />
@@ -24,5 +24,3 @@ const CV = () => (
     </StyledPage>
   </Document>
 );
-
-export default CV;

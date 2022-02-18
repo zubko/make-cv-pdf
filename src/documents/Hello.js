@@ -9,4 +9,4 @@ const Hello = () => (
   </Document>
 );
 
-export default Hello;
+export { Hello as Document };

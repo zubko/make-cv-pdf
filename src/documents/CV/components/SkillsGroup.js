@@ -3,7 +3,7 @@ import React from "react";
 
 import { Container, Group, GroupName } from "./Skills";
 
-export default (props: Object) => (
+export const SkillsGroup = (props: Object) => (
   <Container {...props}>
     <Group>
       <GroupName>React / React Native: </GroupName>

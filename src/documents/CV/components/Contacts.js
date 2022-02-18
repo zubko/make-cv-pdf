@@ -2,31 +2,11 @@ import * as React from "react";
 import { View, Link } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import Glyph from "../../../components/Glyph";
+import { Glyph } from "../../../components/Glyph";
 import { NormalText } from "../../../components/Text";
 import { fonts } from "../../../utils/theme";
 
-const Container = styled(View)`
-  align-items: flex-end;
-  line-height: 1.2;
-`;
-const ItemText = styled(NormalText)`
-  font-size: ${fonts.normal * 1.1};
-`;
-const StyledGlyph = styled(Glyph)`
-  font-size: ${fonts.normal * 1.2};
-`;
-
-const Item = ({ children, href = "" }) => {
-  const Component = href ? Link : View;
-  return (
-    <Component src={href}>
-      <ItemText>{children}</ItemText>
-    </Component>
-  );
-};
-
-export default ({ style }) => (
+export const Contacts = ({ style }) => (
   <Container style={style}>
     <Item href="https://zubko.io">
       https://zubko.io{"  "}
@@ -50,3 +30,23 @@ export default ({ style }) => (
     </Item>
   </Container>
 );
+
+const Item = ({ children, href = "" }) => {
+  const Component = href ? Link : View;
+  return (
+    <Component src={href}>
+      <ItemText>{children}</ItemText>
+    </Component>
+  );
+};
+
+const Container = styled(View)`
+  align-items: flex-end;
+  line-height: 1.2;
+`;
+const ItemText = styled(NormalText)`
+  font-size: ${fonts.normal * 1.1};
+`;
+const StyledGlyph = styled(Glyph)`
+  font-size: ${fonts.normal * 1.2};
+`;

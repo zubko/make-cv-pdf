@@ -8,13 +8,12 @@ import * as React from "react";
 
 type Result = {|
   Document: React.ComponentType<any>,
-  buildPath: string,
   name: string,
 |};
 
 const ARGUMENT_NAME = "--document=";
 
-export default function getDocumentFromArgs(): Result {
+export const getDocumentFromArgs = (): Result => {
   const docArgument = process.argv[2];
   if (!docArgument || docArgument.indexOf(ARGUMENT_NAME) !== 0) {
     throw Error(
@@ -25,7 +24,7 @@ export default function getDocumentFromArgs(): Result {
   //$FlowFixMe - Flow doesn't like parametrized require
   const imported = require(`../documents/${docName}`);
   return {
-    Document: imported.default,
+    Document: imported.Document,
     name: imported.name || docName,
   };
-}
+};

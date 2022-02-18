@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   getAllDocuments,
   getAllDocumentsPaths,
-  getRouteFromPath
+  getRouteFromPath,
 } from "./utils/documentsComponents";
-import Home from "./Home";
+import { Home } from "./Home";
 
 import "./App.css";
 
@@ -24,15 +24,18 @@ function wrappedInViewer<Props: {}>(Component): React.AbstractComponent<Props> {
 let documents = getAllDocuments();
 const paths = getAllDocumentsPaths();
 documents = paths.reduce(
-  (obj, path) => ({ ...obj, [path]: wrappedInViewer(documents[path].default) }),
+  (obj, path) => ({
+    ...obj,
+    [path]: wrappedInViewer(documents[path].Document),
+  }),
   {}
 );
 
-function App() {
+export const App = () => {
   return (
     <Router>
       <Switch>
-        {paths.map(path => (
+        {paths.map((path) => (
           <Route
             key={path}
             exact
@@ -44,6 +47,4 @@ function App() {
       </Switch>
     </Router>
   );
-}
-
-export default App;
+};

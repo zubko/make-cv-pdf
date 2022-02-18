@@ -6,15 +6,15 @@ import styled from "styled-components";
 import {
   getAllDocumentsPaths,
   getNameFromPath,
-  getRouteFromPath
+  getRouteFromPath,
 } from "./utils/documentsComponents";
 
-export default (props: Object) => {
+export const Home = (props: Object) => {
   const paths = getAllDocumentsPaths();
   return (
     <Container {...props}>
       {paths.length
-        ? paths.map(path => (
+        ? paths.map((path) => (
             <Item key={path} to={getRouteFromPath(path)}>
               {getNameFromPath(path)}
             </Item>

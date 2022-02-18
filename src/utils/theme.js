@@ -31,11 +31,7 @@ function paddingBottom(times: number) {
   return `${12 * times}px`;
 }
 export const metrics = {
-  padding(
-    timesTop: number,
-    timesHorz: number = undefined,
-    timesBottom: number = undefined
-  ) {
+  padding(timesTop: number, timesHorz?: number, timesBottom?: number) {
     const top = timesTop;
     const horz = typeof timesHorz !== "undefined" ? timesHorz : timesTop;
     const bottom = typeof timesBottom !== "undefined" ? timesBottom : timesTop;

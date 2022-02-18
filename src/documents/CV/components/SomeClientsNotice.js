@@ -11,7 +11,9 @@ import { fonts } from "../../../utils/theme";
  * in a more traditional way
  */
 
-export default () => <Text style={styles.rotatedText}>Some clients</Text>;
+export const SomeClientsNotice = () => (
+  <Text style={styles.rotatedText}>Some clients</Text>
+);
 
 const styles = StyleSheet.create({
   rotatedText: {
