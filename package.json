@@ -9,7 +9,8 @@
     "build:cv": "yarn build:general --document=CV",
     "build": "yarn build:cv",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +46,6 @@
     "babel-preset-react-app": "^9.0.0",
     "flow-bin": "^0.105.1",
     "import-all.macro": "^2.0.3",
-    "prettier": "2.2.1"
+    "prettier": "2.5.1"
   }
 }

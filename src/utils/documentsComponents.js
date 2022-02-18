@@ -3,7 +3,7 @@ import importAll from "import-all.macro";
 
 const modules = {
   ...importAll.sync("../documents/*/index.js"),
-  ...importAll.sync("../documents/*.js")
+  ...importAll.sync("../documents/*.js"),
 };
 const paths = Object.keys(modules).sort();
 

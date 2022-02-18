@@ -12,10 +12,8 @@ registerFonts();
 if (Env.isNode) {
   const path = require("path");
   const fs = require("fs");
-  const {
-    Document,
-    name,
-  } = require("./utils/getDocumentFromArgs").getDocumentFromArgs();
+  const { Document, name } =
+    require("./utils/getDocumentFromArgs").getDocumentFromArgs();
   const buildPath = path.resolve(`./build`);
   if (!fs.existsSync(buildPath)) {
     fs.mkdirSync(buildPath);
