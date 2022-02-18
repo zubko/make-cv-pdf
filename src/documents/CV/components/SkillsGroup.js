@@ -7,8 +7,8 @@ export default (props: Object) => (
   <Container {...props}>
     <Group>
       <GroupName>React / React Native: </GroupName>
-      TypeScript, JavaScript, Ramda, Redux, MobX, Redux Saga, (S)CSS, Styled
-      Components, Browser DOM, Interop with native code.
+      TypeScript, JavaScript, Storybook, Jest, Redux, MobX, Redux Saga, (S)CSS,
+      Styled Components, Browser APIs, Ramda, Interop with native code.
     </Group>
     <Group>
       <GroupName>iOS: </GroupName>
@@ -25,8 +25,9 @@ export default (props: Object) => (
       SOLID.
     </Group>
     <Group>
-      <GroupName>Basic level but interested in: </GroupName>
-      GraphQL, Backends & DBs, Firebase, UI/UX design.
+      <GroupName>Additional interests: </GroupName>
+      Amplitude, Kibana, GraphQL, Backends & DBs, Modern C++, Firebase, UI/UX
+      design.
     </Group>
   </Container>
 );

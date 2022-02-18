@@ -36,8 +36,8 @@ export default ({ style }) => (
       alex@zubko.io{"  "}
       <StyledGlyph name="envelope" />
     </Item>
-    <Item href="tel:+380963945469">
-      +380 (96) 394-54-69{"  "}
+    <Item href="tel:+491759999340">
+      +49 (175) 9999-340{"  "}
       <StyledGlyph name="phone" />
     </Item>
     <Item>

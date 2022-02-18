@@ -39,15 +39,19 @@ export const Item = ({
     }
   >
     <ItemTitle style={isSubsection ? subSectionPadding : null}>
-      <BoldText>{title}</BoldText>
-      {" / "}
       {dates ? (
         <>
           <Dates>{dates}</Dates>
-          {company ? " / " : null}
+          {" / "}
         </>
       ) : null}
-      {company}
+      <BoldText>{title}</BoldText>
+      {company ? (
+        <>
+          {" / "}
+          {company}
+        </>
+      ) : null}
     </ItemTitle>
     <View style={isSubsection ? subSectionPadding : null}>{children}</View>
   </Container>

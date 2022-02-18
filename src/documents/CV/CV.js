@@ -7,14 +7,18 @@ import Header from "./components/Header";
 import CodeExamples from "./components/CodeExamples";
 import Languages from "./components/Languages";
 import SkillsGroup from "./components/SkillsGroup";
-import ExperienceGroup from "./components/ExperienceGroup";
+import { ExperienceGroupPrimary } from "./components/ExperienceGroupPrimary";
+import { ExperienceGroupSecondary } from "./components/ExperienceGroupSecondary";
 
 const CV = () => (
   <Document size="A4" title="CV-Alexander-Zubko-RN-Mobile-Web">
     <StyledPage>
       <Header />
       <SkillsGroup />
-      <ExperienceGroup />
+      <ExperienceGroupPrimary />
+    </StyledPage>
+    <StyledPage>
+      <ExperienceGroupSecondary />
       <CodeExamples />
       <Languages />
     </StyledPage>

@@ -22,13 +22,13 @@ function paddingHorz(times: number) {
   return `${16 * times}px`;
 }
 function paddingTop(times: number) {
-  return `${8 * times}px`;
+  return `${12 * times}px`;
 }
 // lineHeight makes extra space below the text
 // instead of centering the text in the line
 // so bottom padding should be smaller to compensate that
 function paddingBottom(times: number) {
-  return `${4 * times}px`;
+  return `${12 * times}px`;
 }
 export const metrics = {
   padding(
