@@ -1,13 +1,12 @@
 /**
  * Meant to be called from Node.
  * Gets the Document component and config from the command line arg.
- * @flow
  */
 
-type Result = {|
-  Document: React.ComponentType<any>,
-  fileName: string,
-|};
+type Result = {
+  Document: React.ComponentType<any>;
+  fileName: string;
+};
 
 const ArgumentName = "--document=";
 
@@ -18,11 +17,10 @@ export const getDocumentFromArgs = (): Result => {
       `❌: The command should be called with --document=Name. Found: ${docArgument}`
     );
   }
-  const docName = docArgument.substr(ArgumentName.length);
+  const docName = docArgument.substring(ArgumentName.length);
   let pathToDocument = getPathToDocument(docName);
   //$FlowFixMe - Flow doesn't like parametrized require
   const imported = require(pathToDocument);
-  // console.log("doc", imported[docName], docName);
   return {
     Document: imported[docName],
     fileName: imported.fileName || docName,

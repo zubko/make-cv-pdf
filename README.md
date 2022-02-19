@@ -83,3 +83,15 @@ The images and fonts can be found in the `public` folder.
 The idea to keep the PDF generation separate from the website where this document is used is to not mix 2 different React apps / environments under the same root. Although with the modern improved tooling for monorepo I think it would be better to have the Web app and the PDF generation in the same repository now.
 
 Happy hacking!
+
+## CRA
+
+The Web preview of the project is based on Create React App with a TypeScript template. There was an issue with Webpack v5 and Node.js polyfills, so [Craco](https://github.com/gsoft-inc/craco) was used to modify the Webpack config of CRA. Then Storybook was added on top of that. It's still possible to run CRA with `yarn start:cra` if some tooling debug of checking the document directly in the browser without Storybook is needed. CRA part also can be useful to add unit tests for example.
+
+## Node.js
+
+With [TS Node](https://github.com/TypeStrong/ts-node) running the PDF generation from TypeScript files was very straightforward. Just one change in `tsconfig.json` was needed to enable conversion from ES Modules syntax to CommonJS.
+
+## TypeScript
+
+The project started with minimal usage of Flow. TypeScript was adopted at the later stage. Using TypeScript to the max and flipping `strict: true` is the next step in this migration.

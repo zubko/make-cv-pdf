@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
@@ -8,12 +6,12 @@ import { colors, metrics } from "../../../utils/theme";
 import { NormalText, BoldText, ItalicText } from "../../../components/Text";
 
 type ItemProps = {
-  title: string,
-  dates?: string,
-  company?: string,
-  children: React.Node,
-  isSubsection?: boolean,
-  isLastItem?: boolean,
+  title: string;
+  dates?: string;
+  company?: string;
+  children: React.ReactNode;
+  isSubsection?: boolean;
+  isLastItem?: boolean;
 };
 
 export const SectionTitle = styled(NormalText)`

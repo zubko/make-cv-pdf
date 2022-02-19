@@ -2,7 +2,7 @@ import { Font } from "@react-pdf/renderer";
 
 import { getResourcePath } from "./getResourcePath";
 
-export const registerFonts = () => {
+export const registerFonts = (): void => {
   Font.register({
     family: "Title",
     fonts: [

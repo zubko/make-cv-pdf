@@ -1,5 +1,3 @@
-// @flow
-
 export const colors = {
   header: "#263547",
   lightBg: "white",

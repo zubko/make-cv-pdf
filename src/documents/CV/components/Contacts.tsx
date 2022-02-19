@@ -1,44 +1,42 @@
 import * as React from "react";
-import { View, Link } from "@react-pdf/renderer";
+import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { Glyph } from "../../../components/Glyph";
 import { NormalText } from "../../../components/Text";
-import { fonts } from "../../../utils/theme";
+import { colors, fonts } from "../../../utils/theme";
+import { Link } from "../../../components/Link";
 
 export const Contacts = ({ style }) => (
   <Container style={style}>
-    <Item href="https://zubko.io">
+    <ItemLink href="https://zubko.io">
       https://zubko.io{"  "}
       <StyledGlyph name="globe" />
-    </Item>
-    <Item href="mailto:alex@zubko.io">
+    </ItemLink>
+    <ItemLink href="mailto:alex@zubko.io">
       alex@zubko.io{"  "}
       <StyledGlyph name="envelope" />
-    </Item>
-    <Item href="tel:+491759999340">
+    </ItemLink>
+    <ItemLink href="tel:+491759999340">
       +49 (175) 9999-340{"  "}
       <StyledGlyph name="phone" />
-    </Item>
-    <Item>
+    </ItemLink>
+    <ItemText>
       Remote / Relocation{"  "}
       <StyledGlyph name="map-marker" />
-    </Item>
-    <Item>
+    </ItemText>
+    <ItemText>
       zubko.alexander{"  "}
       <StyledGlyph name="skype" />
-    </Item>
+    </ItemText>
   </Container>
 );
 
-const Item = ({ children, href = "" }) => {
-  const Component = href ? Link : View;
-  return (
-    <Component src={href}>
-      <ItemText>{children}</ItemText>
-    </Component>
-  );
-};
+const ItemLink = ({ href = "", children }) => (
+  <StyledLink href={href}>
+    <ItemText>{children}</ItemText>
+  </StyledLink>
+);
 
 const Container = styled(View)`
   align-items: flex-end;
@@ -49,4 +47,7 @@ const ItemText = styled(NormalText)`
 `;
 const StyledGlyph = styled(Glyph)`
   font-size: ${fonts.normal * 1.2};
+`;
+const StyledLink = styled(Link)`
+  color: ${colors.lightText};
 `;

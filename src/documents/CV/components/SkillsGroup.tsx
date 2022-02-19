@@ -1,4 +1,3 @@
-// @flow
 import React from "react";
 
 import { Container, Group, GroupName } from "./Skills";

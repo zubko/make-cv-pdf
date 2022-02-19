@@ -1,4 +1,3 @@
-// @flow
 import * as React from "react";
 import { View, Image } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
@@ -9,11 +8,7 @@ import { H1, H2 } from "../../../components/Text";
 
 import { Contacts } from "./Contacts";
 
-type Props = {
-  title: string,
-};
-
-export const Header = ({ title, ...otherProps }: Props) => (
+export const Header = ({ ...otherProps }) => (
   <Container {...otherProps}>
     <Photo src={getResourcePath("photo.png")} />
     <MainArea>
@@ -26,7 +21,7 @@ export const Header = ({ title, ...otherProps }: Props) => (
 
 const Container = styled(View)`
   background-color: ${colors.header};
-  color: white;
+  color: ${colors.lightText};
   flex-direction: row;
 `;
 const MainArea = styled(View)`

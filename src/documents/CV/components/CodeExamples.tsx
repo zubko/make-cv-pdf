@@ -1,10 +1,11 @@
 import * as React from "react";
-import { View, Link } from "@react-pdf/renderer";
+import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { colors, metrics } from "../../../utils/theme";
 import { NormalText, BoldText } from "../../../components/Text";
 import { Glyph } from "../../../components/Glyph";
+import { Link } from "../../../components/Link";
 
 export const CodeExamples = (props) => (
   <Container {...props}>
@@ -37,10 +38,14 @@ const Links = styled(View)`
 `;
 
 const LinkItem = ({ children, ...otherProps }) => (
-  <Link src={children} {...otherProps}>
+  <StyledLink src={children} {...otherProps}>
     <NormalText>{children}</NormalText>
-  </Link>
+  </StyledLink>
 );
+
+const StyledLink = styled(Link)`
+  color: ${colors.darkText};
+`;
 
 const StyledGlyph = styled(Glyph)`
   font-size: 5;

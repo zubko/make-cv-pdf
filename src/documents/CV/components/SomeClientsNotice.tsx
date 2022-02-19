@@ -1,5 +1,3 @@
-// @flow
-
 import React from "react";
 import { StyleSheet, Text } from "@react-pdf/renderer";
 

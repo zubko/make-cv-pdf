@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn storybook",
     "develop": "yarn start",
-    "build": "BABEL_ENV=node babel-node ./src/scripts/build.js",
+    "start:cra": "yarn craco start",
+    "build": "RUNTIME_ENV=node ts-node ./src/scripts/build.ts",
     "build:cv": "yarn build --document=CV",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -14,7 +15,10 @@
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": "react-app",
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
     "overrides": [
       {
         "files": [
@@ -39,28 +43,44 @@
     ]
   },
   "dependencies": {
-    "@react-pdf/renderer": "1.6.12",
-    "@react-pdf/styled-components": "^1.4.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "styled-components": "^5.2.1"
+    "@react-pdf/renderer": "2.1.1",
+    "@react-pdf/styled-components": "1.4.0",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "5.3.3",
+    "typescript": "^4.5.5",
+    "util": "^0.12.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
+    "@craco/craco": "^6.4.3",
+    "@react-pdf/types": "^2.0.8",
     "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
     "@storybook/node-logger": "^6.4.19",
-    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/preset-create-react-app": "^4.0.1",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
-    "babel-preset-react-app": "^9.0.0",
-    "flow-bin": "^0.105.1",
-    "prettier": "2.5.1"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "prettier": "2.5.1",
+    "serialize-javascript": "^6.0.0",
+    "ts-node": "^10.5.0",
+    "webpack": "^5.69.1"
+  },
+  "resolutions": {
+    "webpack": "^5.69.1"
   }
 }
