@@ -20,14 +20,13 @@ export const SkillsGroup = (props: Object) => (
       Java, Kotlin, Android Studio, Gradle, Android libraries.
     </Group>
     <Group>
-      <GroupName>General: </GroupName>
-      Accessibility, Data structures and algorithms, Git, CI/CD, FP, DRY, YAGNI,
-      SOLID.
+      <GroupName>Other: </GroupName>
+      CI/CD, Amplitude, Kibana, GraphQL, Firebase, Git, Modern C++, UI/UX
+      design.
     </Group>
     <Group>
-      <GroupName>Additional interests: </GroupName>
-      Amplitude, Kibana, GraphQL, Backends & DBs, Modern C++, Firebase, UI/UX
-      design.
+      <GroupName>General: </GroupName>
+      Accessibility, Data structures and algorithms, FP, DRY, YAGNI, SOLID.
     </Group>
   </Container>
 );
