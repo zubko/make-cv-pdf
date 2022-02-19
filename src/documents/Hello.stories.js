@@ -1,11 +1,11 @@
-import { Document } from "./Hello";
+import { Hello } from "./Hello";
 
 export default {
   title: "Documents/Hello",
-  component: Document,
+  component: Hello,
   parameters: {
     isDocumentStory: true,
   },
 };
 
-export { Document as Hello };
+export { Hello };

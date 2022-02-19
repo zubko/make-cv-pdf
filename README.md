@@ -1,6 +1,6 @@
 ## Generating CV PDF using React (react-pdf)
 
-Instead of drawing the CV in Sketch or Canva or making it with some word processor like Google Docs or MS Word, why not to use your React skills and generate the CV from code!
+Instead of drawing the CV in Sketch or Canva or making it with some word processor like Google Docs or MS Word, why not to use our React skills and generate the CV from code!
 
 ### Some pros:
 
@@ -8,17 +8,23 @@ Instead of drawing the CV in Sketch or Canva or making it with some word process
 
 - It's relatively easy to experiment with the structure, considering that going from 2 to 1 columns is as quick as tuning some flexbox CSS and moving components between parents.
 
-- Once everything is setup it's quite magical to change some consts like the font size in one place or paddings, colors etc and observe the result
+- Once everything is setup it's quite magical to change some consts like the font size in one place or paddings, colors etc and observe the result.
 
 - Generating PDF from code can be useful for some other projects where users can download some generated content, receipts, itineraries etc.
 
 - No need for some specific hacks when the editor doesn't support some feature. For example I was struggling making URLs in Canva, I ended up putting empty overlays with the link. It worked OK, but any change to the structure required a lot of drag'n'drop of invisible elements which wasn't fun and was also error prone.
+
+- Git based edit history.
+
+- Automation compatible out of the box. The updated document can be automatically built and delivered to the place where it's used.
 
 ### Some cons:
 
 - Making initial version will take more time because of all the setup needed and sometimes dragging the texts and rects with the mouse is just faster than doing that from code.
 
 - It won't be easy to implement the design which is outside of flexbox or react-pdf capabilities, like putting the text inside the circle or drawing non rectangular shapes. (Although for rendering PDF from HTML these capabilities will be broader).
+
+- An additional maintenance of the JS / React tooling will be needed from time to time.
 
 ### Using react-pdf vs. any of HTML-to-PDF solution
 
@@ -36,58 +42,44 @@ Instead of drawing the CV in Sketch or Canva or making it with some word process
 
 </ul>
 
-### Multiple documents
+### Document components
 
 There is a small interface to make it possible to render different documents:
 
-- Each document should have a file or folder in the `documents` folder. If it's a folder it should have an `index.js` file.
+- Each document should have a file or folder in the `documents` folder. If it's a folder there should a JS file matching the folder name.
 
-- Each document should export a component as its `default` export. This component should render React PDF `Document` with some children.
+- Each document should have a document component exported with the same name as the document file or folder. This component should render React PDF `Document` with some children.
 
-- Each document should export `buildPath` string pointing to where the document should be saved after building.
+- A document can export `fileName` string if the file name should be different from the component name.
+
+- A document can define a `{Component}.stories.js/jsx` with `isDocumentStory: true` parameter to be rendered in Storybook without an extra `Document` decorator which is used for components.
 
 ### Setup
 
 You can use this project as a starting point or a reference to save some configuration time.
 
-Build it with:
+Build a document with:
 
 ```sh
-yarn build --document=%%DOC_NAME%%
+yarn build --document=Name
 ```
 
-or predefined
+The `Name` should match one of the exported components in `/src/documents` folder (case-sensitive) as mentioned in the previous section.
 
-```sh
-yarn build:mobile
-```
-
-or everything
-
-```sh
-yarn build:all
-```
-
-This will render a PDF document using node.
-
-And it is also possible (and important) to be able to preview the document while editing it. I've used `create-react-app` for that, so run as usual:
+[Storybook](https://storybook.js.org) is used to iterate on the document and its components during development. Run it with:
 
 ```sh
 yarn start
-```
 
-or
+-- or --
 
-```
 yarn develop
 ```
 
 Keep the browser side-by-side to the code and enjoy the live-reload while editing.
 
-For the browser there is a React Router based solution to provide a rendering of different documents. It's possible to open different documents in different tabs and compare them side by side while they are edited. The root page will show a menu with the items found in the `documents` folder. And each document is accessible under its own path. For example `http://localhost:3000/web` is for Web Dev CV. List of available documents is collected at the build time thanks to [import-all.macro](https://github.com/kentcdodds/import-all.macro).
-
 The images and fonts can be found in the `public` folder.
 
-The idea to keep the PDF generation separate from the website is to not mix 2 different React apps / environments under the same root.
+The idea to keep the PDF generation separate from the website where this document is used is to not mix 2 different React apps / environments under the same root. Although with the modern improved tooling for monorepo I think it would be better to have the Web app and the PDF generation in the same repository now.
 
 Happy hacking!

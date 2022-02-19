@@ -3,11 +3,10 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn storybook",
     "develop": "yarn start",
-    "build:general": "BABEL_ENV=node babel-node ./src/index.js",
-    "build:cv": "yarn build:general --document=CV",
-    "build": "yarn build:cv",
+    "build": "BABEL_ENV=node babel-node ./src/scripts/build.js",
+    "build:cv": "yarn build --document=CV",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
@@ -62,7 +61,6 @@
     "@storybook/testing-library": "^0.0.9",
     "babel-preset-react-app": "^9.0.0",
     "flow-bin": "^0.105.1",
-    "import-all.macro": "^2.0.3",
     "prettier": "2.5.1"
   }
 }

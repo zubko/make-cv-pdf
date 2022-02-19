@@ -31,7 +31,7 @@ jobs:
         run: yarn install
 
       - name: Build the document
-        run: yarn build
+        run: yarn build:cv
 
       - name: Push to zubko.io repo
         uses: dmnemec/copy_file_to_another_repo_action@000e55236d089b975f343d708d3942ffef2cc16c

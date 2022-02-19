@@ -8175,14 +8175,6 @@ immer@1.10.0:
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha512-O3sR1/opvCDGLEVcvrGTMtLac8GJ5IwZC4puPrLuRj3l7ICKvkmA0vGuU9OW8mV9WIBRnaxp5GJh9IEAaNOoYg==
 
-import-all.macro@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/import-all.macro/-/import-all.macro-2.0.3.tgz#3e5de28920eb7237badb85acf15eb71c8d5b04f6"
-  integrity sha512-uOdSLEY4/DQ2L7AWlx/NbX/qseStklzBD525oeWFPRvb5ScHQXouu37ItQi0RB0pG01WtmLYMLsfoQcyTHOFxA==
-  dependencies:
-    babel-plugin-macros "^2.0.0"
-    glob "^7.1.2"
-
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"
