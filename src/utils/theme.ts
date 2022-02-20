@@ -1,4 +1,4 @@
-export const colors = {
+export const Colors = {
   header: "#263547",
   lightBg: "white",
   middleBg: "lightgray",
@@ -8,7 +8,7 @@ export const colors = {
   darkText: "#111",
 };
 
-export const fonts = {
+export const Fonts = {
   normal: 10.5,
   h1: 22,
   h2: 15,
@@ -28,7 +28,7 @@ function paddingTop(times: number) {
 function paddingBottom(times: number) {
   return `${12 * times}px`;
 }
-export const metrics = {
+export const Metrics = {
   padding(timesTop: number, timesHorz?: number, timesBottom?: number) {
     const top = timesTop;
     const horz = typeof timesHorz !== "undefined" ? timesHorz : timesTop;

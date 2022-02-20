@@ -4,7 +4,7 @@ import styled from "@react-pdf/styled-components";
 
 import { Glyph } from "../../../components/Glyph";
 import { NormalText } from "../../../components/Text";
-import { colors, fonts } from "../../../utils/theme";
+import { Colors, Fonts } from "../../../utils/theme";
 import { Link } from "../../../components/Link";
 
 export const Contacts = ({ style }) => (
@@ -43,11 +43,11 @@ const Container = styled(View)`
   line-height: 1.2;
 `;
 const ItemText = styled(NormalText)`
-  font-size: ${fonts.normal * 1.1};
+  font-size: ${Fonts.normal * 1.1};
 `;
 const StyledGlyph = styled(Glyph)`
-  font-size: ${fonts.normal * 1.2};
+  font-size: ${Fonts.normal * 1.2};
 `;
 const StyledLink = styled(Link)`
-  color: ${colors.lightText};
+  color: ${Colors.lightText};
 `;

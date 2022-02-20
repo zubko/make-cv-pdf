@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text } from "@react-pdf/renderer";
 
-import { fonts } from "../../../utils/theme";
+import { Fonts } from "../../../utils/theme";
 
 /**
  * styled-components fails to translate the `transform:rotate()` style
@@ -16,7 +16,7 @@ export const SomeClientsNotice = () => (
 const styles = StyleSheet.create({
   rotatedText: {
     fontFamily: "Content",
-    fontSize: fonts.normal + 2,
+    fontSize: Fonts.normal + 2,
     textTransform: "uppercase",
     opacity: 0.3,
     transform: "rotate(-90deg)",

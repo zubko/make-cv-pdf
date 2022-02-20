@@ -2,7 +2,7 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { colors, metrics } from "../../../utils/theme";
+import { Colors, Metrics } from "../../../utils/theme";
 import { NormalText, BoldText } from "../../../components/Text";
 import { Glyph } from "../../../components/Glyph";
 
@@ -27,8 +27,8 @@ export const Languages = (props) => (
 );
 
 const Container = styled(View)`
-  background-color: ${colors.lightBg};
-  padding: ${metrics.padding(1)};
+  background-color: ${Colors.lightBg};
+  padding: ${Metrics.padding(1)};
   flex-direction: row;
   justify-content: flex-start;
 `;

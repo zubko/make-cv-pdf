@@ -2,7 +2,7 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { colors, metrics } from "../../../utils/theme";
+import { Colors, Metrics } from "../../../utils/theme";
 import { NormalText, BoldText, ItalicText } from "../../../components/Text";
 
 type ItemProps = {
@@ -15,8 +15,8 @@ type ItemProps = {
 };
 
 export const SectionTitle = styled(NormalText)`
-  padding: ${metrics.padding(0.8, 1, 0.5)};
-  background-color: ${colors.middleBg};
+  padding: ${Metrics.padding(0.8, 1, 0.5)};
+  background-color: ${Colors.middleBg};
 `;
 
 export const Item = ({
@@ -63,17 +63,17 @@ export const ItemSubTitle = styled(ItalicText)`
   position: absolute;
   text-align: justify;
   padding-left: 15;
-  padding-top: ${metrics.padding(1)};
+  padding-top: ${Metrics.padding(1)};
   transform: rotate(100deg);
 `;
 
 const Container = styled(View)`
-  padding: ${metrics.padding(0.5, 1, 1)};
+  padding: ${Metrics.padding(0.5, 1, 1)};
 `;
 
 const ItemTitle = styled(NormalText)`
-  /* background-color: ${colors.darkBg}; */
-  color: ${colors.darkBg};
+  /* background-color: ${Colors.darkBg}; */
+  color: ${Colors.darkBg};
 `;
 
 const subSectionPadding = {

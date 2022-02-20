@@ -1,12 +1,12 @@
 import { Text } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { fonts } from "../utils/theme";
+import { Fonts } from "../utils/theme";
 
 export const NormalText = styled(Text)`
   font-family: "Content";
-  font-size: ${fonts.normal};
-  line-height: ${fonts.lineHeight};
+  font-size: ${Fonts.normal};
+  line-height: ${Fonts.lineHeight};
 `;
 
 export const BoldText = styled(NormalText)`
@@ -19,14 +19,14 @@ export const ItalicText = styled(NormalText)`
 
 export const H1 = styled(Text)`
   font-family: "Title";
-  font-size: ${fonts.h1};
-  line-height: ${fonts.lineHeight};
+  font-size: ${Fonts.h1};
+  line-height: ${Fonts.lineHeight};
   font-weight: medium;
 `;
 
 export const H2 = styled(Text)`
   font-family: "Title";
-  font-size: ${fonts.h2};
-  line-height: ${fonts.lineHeight};
+  font-size: ${Fonts.h2};
+  line-height: ${Fonts.lineHeight};
   font-weight: normal;
 `;

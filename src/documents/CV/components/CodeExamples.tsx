@@ -2,7 +2,7 @@ import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import { colors, metrics } from "../../../utils/theme";
+import { Colors, Metrics } from "../../../utils/theme";
 import { NormalText, BoldText } from "../../../components/Text";
 import { Glyph } from "../../../components/Glyph";
 import { Link } from "../../../components/Link";
@@ -21,10 +21,10 @@ export const CodeExamples = (props) => (
 );
 
 const Container = styled(View)`
-  background-color: ${colors.middleBg};
-  padding: ${metrics.padding(1)};
-  padding-top: ${metrics.paddingTop(0.8)};
-  padding-bottom: ${metrics.paddingBottom(0.6)};
+  background-color: ${Colors.middleBg};
+  padding: ${Metrics.padding(1)};
+  padding-top: ${Metrics.paddingTop(0.8)};
+  padding-bottom: ${Metrics.paddingBottom(0.6)};
   flex-direction: row;
   justify-content: flex-start;
 `;
@@ -44,7 +44,7 @@ const LinkItem = ({ children, ...otherProps }) => (
 );
 
 const StyledLink = styled(Link)`
-  color: ${colors.darkText};
+  color: ${Colors.darkText};
 `;
 
 const StyledGlyph = styled(Glyph)`
