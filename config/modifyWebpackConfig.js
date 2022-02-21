@@ -1,20 +1,8 @@
 const webpack = require("webpack");
 
-var serialize = require("serialize-javascript");
-
 // Webpack v5 doesn't include polyfills of Node.js libs which are needed for react-pdf
 // https://react-pdf.org/advanced#webpack-config
 const modifyWebpackConfig = (config) => {
-  // return config;
-  // console.log(
-  //   serialize(config, {
-  //     space: 2,
-  //     unsafe: true,
-  //     ignoreFunction: true,
-  //   })
-  // );
-  // console.log(config.resolve.fallback);
-  // process.exit();
   // eslint-disable-next-line no-param-reassign
   config.resolve.fallback = {
     ...config.resolve.fallback,
