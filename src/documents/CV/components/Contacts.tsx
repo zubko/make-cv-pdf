@@ -1,11 +1,10 @@
-import * as React from "react";
 import { View } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
 import { Glyph } from "../../../components/Glyph";
+import { Link } from "../../../components/Link";
 import { NormalText } from "../../../components/Text";
 import { Colors, Fonts } from "../../../utils/theme";
-import { Link } from "../../../components/Link";
 
 export const Contacts = ({ style }) => (
   <Container style={style}>
@@ -16,10 +15,6 @@ export const Contacts = ({ style }) => (
     <ItemLink href="mailto:alex@zubko.io">
       alex@zubko.io{"  "}
       <StyledGlyph name="envelope" />
-    </ItemLink>
-    <ItemLink href="tel:+491759999340">
-      +49 (175) 9999-340{"  "}
-      <StyledGlyph name="phone" />
     </ItemLink>
     <ItemText>
       Remote / Relocation{"  "}
