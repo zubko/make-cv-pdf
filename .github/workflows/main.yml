@@ -43,4 +43,4 @@ jobs:
           destination_folder: "static"
           user_email: "alexander.zubko@gmail.com"
           user_name: "zubko"
-          commit_message: "🤖 Update CV (from CI)"
+          commit_message: "fix(CV): update file (from CI)"
