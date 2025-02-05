@@ -9,19 +9,21 @@ import { Glyph } from "../../../components/Glyph";
 export const Languages = (props) => (
   <Container {...props}>
     <NormalText>
-      <BoldText>Languages</BoldText>
+      <BoldText>Human languages</BoldText>
       <BoldText>: </BoldText>
     </NormalText>
     <List>
-      <NormalText>English: 8/10</NormalText>
+      <NormalText>ENG: 9/10</NormalText>
       <StyledGlyph name="square-solid" />
-      <NormalText>Ukrainian: 10</NormalText>
+      <NormalText>UKR: 10</NormalText>
       <StyledGlyph name="square-solid" />
-      <NormalText>Russian: 10</NormalText>
+      <NormalText>RUS: 10</NormalText>
       <StyledGlyph name="square-solid" />
-      <NormalText>Portuguese: 6/10</NormalText>
+      <NormalText>ESP: 7/10</NormalText>
       <StyledGlyph name="square-solid" />
-      <NormalText>Spanish: 3/10</NormalText>
+      <NormalText>POR: 5/10</NormalText>
+      <StyledGlyph name="square-solid" />
+      <NormalText>GER: 3/10</NormalText>
     </List>
   </Container>
 );

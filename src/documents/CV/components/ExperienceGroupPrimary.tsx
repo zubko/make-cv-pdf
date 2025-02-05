@@ -7,18 +7,30 @@ export const ExperienceGroupPrimary = (props: Object) => (
   <View {...props}>
     <SectionTitle>Chosen related work experience:</SectionTitle>
     <Item
+      title="Senior Software Engineer"
+      dates="Jun'23 - Present"
+      company="Pet Media Group, Berlin"
+    >
+      <ItemText>
+        Using React Native and React to work on team Monetization Mobile and Web features.
+        React Native guild lead. Using my iOS and Android native skills to integrate
+        libraries and write native code when it's needed or to configure the projects.
+        Leading CI/CD configuration and improvements. Enabled over-the-air updates
+        to make Mobile deploys work similar to Web ones.
+      </ItemText>
+    </Item>
+    <Item
       title="Senior Frontend Developer"
-      dates="Aug'21 - Present"
+      dates="Aug'21 - Mar'22"
       company="Omio, Berlin"
     >
       <ItemText>
-        Using React and React Native as a member of Personalization team to add
-        new features, improve or fix existing ones related to user
-        authentication and user profile. Preparing A/B tests, collecting
-        tracking metrics. Refactoring existing legacy code, improving
-        architecture of our components, migrating native UI to React Native.
-        Participating actively in discussions about improvements of the
-        company's frontend infrastructure which is shared between the teams.
+        Used React and React Native as a member of Personalization team to work
+        on the features related to user authentication and user profile.
+        Used my iOS native skills to contribute the parts which were not yet
+        migrated to React Native.
+        Participated actively in discussions about improvements of the
+        company's frontend infrastructure which was shared between all teams.
       </ItemText>
     </Item>
     <Item
@@ -29,7 +41,7 @@ export const ExperienceGroupPrimary = (props: Object) => (
       <ItemText>
         I've re-joined the company to help with more challenging tasks for the
         apps that I've made and for other mobile or web apps of the company.
-        (Some tasks: Upgrading RN version, setting up CI/CD, making code review,
+        (Some tasks: Upgrading RN version, setting up CI/CD, performing code review,
         integrating audio streaming library, making an architecture for Web &
         React Native app with maximum shared code between the platforms)
       </ItemText>
@@ -77,8 +89,9 @@ export const ExperienceGroupPrimary = (props: Object) => (
     >
       <ItemText>
         Developed a Pregnancy tracker React Native iOS app and worked on the
-        Native Android apps of the company. Advocated for starting to use Kotlin
-        for the new code, which the company appreciated latter on.
+        Native Android apps of the company. Used native code when the performance
+        requirements were high. For those native parts React Native was like a
+        live-reloadable configuration layer.
       </ItemText>
     </Item>
     <Item
@@ -95,19 +108,6 @@ export const ExperienceGroupPrimary = (props: Object) => (
         AppStore. I also created tools and scripts to help with the development
         (for generating the initial Core Data DB to use after install,
         eliminating unused images, helping analyzing reported errors etc).
-      </ItemText>
-    </Item>
-    <Item
-      title="iOS Native Developer"
-      dates="Feb'11 - Aug'11"
-      company="SoftServe, Ukraine"
-      isLastItem
-    >
-      <ItemText>
-        Developed 1 app in a team of 2 iOS and 2 Android developers. Worked on
-        another iOS native app in a team of 3 iOS developers for a big corporate
-        client which was discontinued due to the client's internal
-        restructuring.
       </ItemText>
     </Item>
   </View>

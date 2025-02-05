@@ -5,23 +5,18 @@ import { Container, Group, GroupName } from "./Skills";
 export const SkillsGroup = (props: Object) => (
   <Container {...props}>
     <Group>
-      <GroupName>React / React Native: </GroupName>
-      TypeScript, JavaScript, Storybook, Jest, Redux, MobX, Redux Saga, (S)CSS,
-      Styled Components, Browser APIs, Ramda, Interop with native code.
-    </Group>
-    <Group>
       <GroupName>iOS: </GroupName>
-      Objective-C, Swift, Xcode, Apple and 3rd party frameworks, Instruments,
-      CocoaPods, Fastlane.
+      Swift, SwiftUI, Objective-C, UIKit, Xcode, Apple and 3rd party frameworks, Instruments,
+      Fastlane.
     </Group>
     <Group>
-      <GroupName>Android: </GroupName>
-      Java, Kotlin, Android Studio, Gradle, Android libraries.
+      <GroupName>React / React Native: </GroupName>
+      TypeScript, JavaScript, Storybook, Jest, Redux, Redux Saga, (S)CSS,
+      Styled Components, Interop with native code.
     </Group>
     <Group>
       <GroupName>Other: </GroupName>
-      CI/CD, Amplitude, Kibana, GraphQL, Firebase, Git, Modern C++, UI/UX
-      design.
+      CI/CD, Amplitude, Grafana, Git, C++, Android Studio, Android app development.
     </Group>
     <Group>
       <GroupName>General: </GroupName>

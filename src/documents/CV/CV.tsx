@@ -11,7 +11,7 @@ import { ExperienceGroupPrimary } from "./components/ExperienceGroupPrimary";
 import { ExperienceGroupSecondary } from "./components/ExperienceGroupSecondary";
 
 export const CV = () => (
-  <Document author="Alexander Zubko" title="CV-Alexander-Zubko-RN-Mobile-Web">
+  <Document author="Oleksandr Zubko" title="CV-Oleksandr-Zubko-iOS">
     <Page size="A4">
       <Header />
       <SkillsGroup />
@@ -25,4 +25,4 @@ export const CV = () => (
   </Document>
 );
 
-export const fileName = "CV-Alexander-Zubko-Mobile-Web";
+export const fileName = "CV-Oleksandr-Zubko-iOS";

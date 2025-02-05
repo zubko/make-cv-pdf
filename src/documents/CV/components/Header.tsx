@@ -12,8 +12,8 @@ export const Header = ({ ...otherProps }) => (
   <Container {...otherProps}>
     <Photo src={getResourcePath("photo.png")} />
     <MainArea>
-      <Name>Alexander Zubko</Name>
-      <H2>React Native & React Developer</H2>
+      <Name>Oleksandr Zubko</Name>
+      <H2>Senior iOS Developer with RN experience</H2>
     </MainArea>
     <StyledContacts />
   </Container>

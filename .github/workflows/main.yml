@@ -38,7 +38,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: "build/CV-Alexander-Zubko-Mobile-Web.pdf"
+          source_file: "build/CV-Oleksandr-Zubko-Mobile-Web.pdf"
           destination_repo: "zubko/zubko.io"
           destination_folder: "static"
           user_email: "alexander.zubko@gmail.com"

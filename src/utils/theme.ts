@@ -1,7 +1,7 @@
 export const Colors = {
   header: "#263547",
   lightBg: "white",
-  middleBg: "lightgray",
+  middleBg: "#eee",
   darkBg: "#263547",
 
   lightText: "#f5f5f5",

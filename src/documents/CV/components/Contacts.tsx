@@ -17,13 +17,13 @@ export const Contacts = ({ style }) => (
       <StyledGlyph name="envelope" />
     </ItemLink>
     <ItemText>
-      Remote / Relocation{"  "}
+      Germany{"  "}
       <StyledGlyph name="map-marker" />
     </ItemText>
-    <ItemText>
-      zubko.alexander{"  "}
-      <StyledGlyph name="skype" />
-    </ItemText>
+    <ItemLink href="tel:+491759999340">
+      +49(175)9999340{"  "}
+      <StyledGlyph name="phone" />
+    </ItemLink>
   </Container>
 );
 
