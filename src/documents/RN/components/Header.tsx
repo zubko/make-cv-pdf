@@ -6,7 +6,7 @@ import { Colors, Fonts } from "../../../utils/theme";
 import { getResourcePath } from "../../../utils/getResourcePath";
 import { H1, H2 } from "../../../components/Text";
 
-import { Contacts } from "./Contacts";
+import { Contacts } from "../../CV/components/Contacts";
 
 export const Header = ({ ...otherProps }) => (
   <Container {...otherProps}>
