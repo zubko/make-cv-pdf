@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { PDFViewer } from "@react-pdf/renderer";
-import { CV } from "./documents/CV/CV";
+import { IOS } from "./documents/IOS/IOS";
 import { registerFonts } from "./utils/registerFonts";
 
 registerFonts();
@@ -9,7 +9,7 @@ registerFonts();
 ReactDOM.render(
   <React.StrictMode>
     <PDFViewer>
-      <CV />
+      <IOS />
     </PDFViewer>
   </React.StrictMode>,
   document.getElementById("root")

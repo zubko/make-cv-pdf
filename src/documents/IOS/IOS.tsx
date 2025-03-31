@@ -10,7 +10,7 @@ import { SkillsGroup } from "./components/SkillsGroup";
 import { ExperienceGroupPrimary } from "./components/ExperienceGroupPrimary";
 import { ExperienceGroupSecondary } from "./components/ExperienceGroupSecondary";
 
-export const CV = () => (
+export const IOS = () => (
   <Document author="Oleksandr Zubko" title="CV-Oleksandr-Zubko-iOS">
     <Page size="A4">
       <Header />
