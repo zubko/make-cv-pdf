@@ -5,7 +5,7 @@ import { Page } from "../../components/Page";
 
 import { Header } from "./components/Header";
 import { CodeExamples } from "./components/CodeExamples";
-import { Languages } from "./components/Languages";
+import { Languages } from "../CV/components/Languages";
 import { SkillsGroup } from "./components/SkillsGroup";
 import { ExperienceGroupPrimary } from "./components/ExperienceGroupPrimary";
 import { ExperienceGroupSecondary } from "./components/ExperienceGroupSecondary";
