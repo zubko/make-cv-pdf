@@ -40,11 +40,10 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: "build/*.pdf"
+          source_file: "build/*"
           destination_repo: "zubko/zubko.io"
           destination_branch: "master"
           destination_folder: "static"
           user_email: "alexander.zubko@gmail.com"
           user_name: "zubko"
           commit_message: "fix(CV): update the files (from CI)"
-          use_rsync: "true"
