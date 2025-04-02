@@ -47,3 +47,4 @@ jobs:
           user_email: "alexander.zubko@gmail.com"
           user_name: "zubko"
           commit_message: "fix(CV): update the files (from CI)"
+          use_rsync: "true"
