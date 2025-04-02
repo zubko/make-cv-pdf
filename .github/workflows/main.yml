@@ -40,7 +40,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: "build/*"
+          source_file: "build/"
           destination_repo: "zubko/zubko.io"
           destination_branch: "master"
           destination_folder: "static"
