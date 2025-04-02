@@ -36,7 +36,7 @@ jobs:
           yarn build:rn
 
       - name: Push to zubko.io repo
-        uses: dmnemec/copy_file_to_another_repo_action@000e55236d089b975f343d708d3942ffef2cc16c
+        uses: dmnemec/copy_file_to_another_repo_action@bbebd3da22e4a37d04dca5f782edd5201cb97083
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
