@@ -10,7 +10,7 @@ import { Contacts } from "../../CV/components/Contacts";
 
 export const Header = ({ ...otherProps }) => (
   <Container {...otherProps}>
-    <Photo src={getResourcePath("photo.png")} />
+    <Photo src={getResourcePath("photo-2.png")} />
     <MainArea>
       <Name>Oleksandr Zubko</Name>
       <H2>React Native & React Developer</H2>
@@ -23,6 +23,7 @@ const Container = styled(View)`
   background-color: ${Colors.header};
   color: ${Colors.lightText};
   flex-direction: row;
+  padding-top: 20px;
 `;
 const MainArea = styled(View)`
   flex: 1;

@@ -7,18 +7,44 @@ export const ExperienceGroupPrimary = (props: Object) => (
   <View {...props}>
     <SectionTitle>Chosen related work experience:</SectionTitle>
     <Item
+      title="Senior Software Engineer"
+      dates="Jun'23 - Present"
+      company="Pet Media Group, Berlin"
+    >
+      <ItemText>
+        Using React Native, React and Node.js to work on team Monetization
+        Mobile and Web features. React Native guild lead. Using my iOS and
+        Android native skills when it's needed. Leading observability, E2E tests
+        and CI/CD configuration. Enabled over-the-air updates to make Mobile
+        deploys effortless and safe.
+      </ItemText>
+    </Item>
+    <Item
+      title="Senior React Native Engineer"
+      dates="July'22 - May'23"
+      company="Pet Media Group, Berlin"
+    >
+      <ItemText>
+        React Native "code owner". Supported the transition of React Native app
+        from the agency to in-house. Fixed and improved the E2E tests suite.
+        Improved CI/CD pipeline. Lead team of 2-3 React Native developers to
+        build new features and decrease the code complexity. Helped to plan the
+        transition of other native apps to React Native using the monorepo to
+        share the code between the apps.
+      </ItemText>
+    </Item>
+    <Item
       title="Senior Frontend Developer"
-      dates="Aug'21 - Present"
+      dates="Aug'21 - Jun'22"
       company="Omio, Berlin"
     >
       <ItemText>
-        Using React and React Native as a member of Personalization team to add
-        new features, improve or fix existing ones related to user
-        authentication and user profile. Preparing A/B tests, collecting
-        tracking metrics. Refactoring existing legacy code, improving
-        architecture of our components, migrating native UI to React Native.
-        Participating actively in discussions about improvements of the
-        company's frontend infrastructure which is shared between the teams.
+        Used React and React Native as a member of Personalization team to work
+        on the features related to user authentication and user profile. Used my
+        iOS native skills to contribute the parts which were not yet migrated to
+        React Native. Participated actively in discussions about improvements of
+        the company's frontend infrastructure which was shared between all
+        teams.
       </ItemText>
     </Item>
     <Item
@@ -79,35 +105,6 @@ export const ExperienceGroupPrimary = (props: Object) => (
         Developed a Pregnancy tracker React Native iOS app and worked on the
         Native Android apps of the company. Advocated for starting to use Kotlin
         for the new code, which the company appreciated latter on.
-      </ItemText>
-    </Item>
-    <Item
-      title="iOS Native Team Lead"
-      dates="Dec'11 - Aug'12 / Apr'13 - Oct'15 / Aug'16 - Feb'17"
-      company="Brownie Points, USA"
-    >
-      <ItemText>
-        Worked with a US based startup to make an app to help parents to
-        motivate their kids to study math. The app had a very smooth UX,
-        optimistic and background communication with the backend where possible.
-        All scrolling and screen switching was smooth and interesting to the
-        eye. Parents and kids loved our app, we had 4.5 star rating in the
-        AppStore. I also created tools and scripts to help with the development
-        (for generating the initial Core Data DB to use after install,
-        eliminating unused images, helping analyzing reported errors etc).
-      </ItemText>
-    </Item>
-    <Item
-      title="iOS Native Developer"
-      dates="Feb'11 - Aug'11"
-      company="SoftServe, Ukraine"
-      isLastItem
-    >
-      <ItemText>
-        Developed 1 app in a team of 2 iOS and 2 Android developers. Worked on
-        another iOS native app in a team of 3 iOS developers for a big corporate
-        client which was discontinued due to the client's internal
-        restructuring.
       </ItemText>
     </Item>
   </View>

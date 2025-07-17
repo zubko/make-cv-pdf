@@ -4,7 +4,6 @@ import styled from "@react-pdf/styled-components";
 
 import { Colors, Metrics } from "../../../utils/theme";
 import { NormalText, BoldText } from "../../../components/Text";
-import { Glyph } from "../../../components/Glyph";
 import { Link } from "../../../components/Link";
 
 export const CodeExamples = (props) => (

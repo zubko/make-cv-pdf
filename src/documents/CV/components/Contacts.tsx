@@ -12,8 +12,8 @@ export const Contacts = ({ style }) => (
       https://zubko.io{"  "}
       <StyledGlyph name="globe" />
     </ItemLink>
-    <ItemLink href="mailto:alex@zubko.io">
-      alex@zubko.io{"  "}
+    <ItemLink href="mailto:alexander.zubko@gmail.com">
+      alexander.zubko@gmail.com{"  "}
       <StyledGlyph name="envelope" />
     </ItemLink>
     <ItemText>
